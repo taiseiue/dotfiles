@@ -1,0 +1,49 @@
+#!/bin/zsh
+
+# macOSの初期設定を行う
+# 参考:# https://mths.be/macos
+
+# --------
+# Dock
+# --------
+
+defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock autohide-delay -float 0
+
+# --------
+# FinderとDesktopServices
+# --------
+
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true # ネットワークドライブに .DS_Store を作成しない
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true # USB ドライブに .DS_Store を作成しない
+defaults write com.apple.finder ShowPathbar -bool true # Finderのパスバーを表示
+
+# --------
+# テキスト入力
+# --------
+
+defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false # 頭文字を自動で大文字にしない
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false # ダッシュへの自動変換を無効化
+defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false # ピリオドを自動でスペースに変換しない
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false # クオートの自動変換を無効化
+
+# --------
+# その他
+# --------
+
+# 保存ダイアログの詳細表示をデフォルトで開く
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+
+# 印刷ダイアログの詳細表示をデフォルトで開く
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
+
+# 書類ディレクトリをiCloud Drive ではなくローカルに保存する
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+
+# sudoをTouch ID で認証する
+sed -e 's/^#auth/auth/' /etc/pam.d/sudo_local.template | sudo tee /etc/pam.d/sudo_local > /dev/null
+
+echo 'Done!'
+echo 'Please restart your Mac.'
