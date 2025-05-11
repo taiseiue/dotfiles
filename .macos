@@ -45,5 +45,27 @@ defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 # sudoをTouch ID で認証する
 sed -e 's/^#auth/auth/' /etc/pam.d/sudo_local.template | sudo tee /etc/pam.d/sudo_local > /dev/null
 
+# ssh-agentを1PasswordのSSHエージェントにする
+mkdir -p ~/Library/LaunchAgents
+cat << EOF > ~/Library/LaunchAgents/com.1password.SSH_AUTH_SOCK.plist
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.1password.SSH_AUTH_SOCK</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/sh</string>
+    <string>-c</string>
+    <string>/bin/ln -sf $HOME/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock \$SSH_AUTH_SOCK</string>
+  </array>
+  <key>RunAtLoad</key>
+  <true/>
+</dict>
+</plist>
+EOF
+launchctl load -w ~/Library/LaunchAgents/com.1password.SSH_AUTH_SOCK.plist
+
 echo 'Done!'
 echo 'Please restart your Mac.'
