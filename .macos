@@ -67,5 +67,11 @@ cat << EOF > ~/Library/LaunchAgents/com.1password.SSH_AUTH_SOCK.plist
 EOF
 launchctl load -w ~/Library/LaunchAgents/com.1password.SSH_AUTH_SOCK.plist
 
+# --------
+# テキストエディタ
+# --------
+duti -s com.coteditor.CotEditor .txt all
+duti -s com.coteditor.CotEditor .log all
+
 echo 'Done!'
 echo 'Please restart your Mac.'
