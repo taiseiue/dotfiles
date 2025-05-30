@@ -51,3 +51,6 @@ alias "vi"="nvim"
 alias "cd.."="cd .."
 alias gr='(){cd ~/source/$1}'
 alias rmtmp='rm -rf ~/tmp/*'
+
+alias mkcd='(){mkdir -p "$1" && cd "$1"}'
+
