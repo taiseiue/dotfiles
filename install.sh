@@ -1,13 +1,17 @@
 #!/bin/sh
 
-ln -s $(pwd)/brewfile ~/.config/brewfile
-ln -s $(pwd)/git ~/.config/git
+export DOTFILES_ROOT="$(cd "$(dirname "$0")" && pwd)"
 
-ln -s $(pwd)/zsh/.zshrc ~/.zshrc
-ln -s $(pwd)/zsh/.zshenv ~/.zshenv
+echo "source $DOTFILES_ROOT/common/zsh/.zshrc" >> ~/.zshrc
+echo "source $DOTFILES_ROOT/common/zsh/.zshenv" >> ~/.zshenv
 
-for file in $(pwd)/aquaskk/*; do
-  ln -s "${file}" ~/"Library/Application Support/AquaSKK/$(basename ${file})"
-done
+ln -s "$DOTFILES_ROOT/common/git" ~/.config/git
+git config --global core.excludesfile "$DOTFILES_ROOT/common/git/.gitignore_global"
 
-git config --global core.excludesfile ~/.config/git/gitignore
+# 環境ごとの設定を読み込む
+if [ "$(uname)" = 'Darwin' ]; then
+  source "$DOTFILES_ROOT/darwin/install.sh"
+fi
+
+# zshのコンパイル
+source "$DOTFILES_ROOT/compile.zsh"
