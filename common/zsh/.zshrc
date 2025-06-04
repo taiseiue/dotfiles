@@ -44,7 +44,6 @@ alias ll='ls -alF'
 setopt auto_cd              # ディレクトリ名を入力するだけでcdする
 setopt extended_glob        # 拡張グロブを有効にする
 setopt hist_ignore_dups     # ヒストリで重複するコマンドを無視する
-setopt hist_reduce_dups     # ヒストリで重複するコマンドを自動的に削除する
 setopt share_history        # ヒストリを共有する
 
 # 環境ごとの設定を読み込む
