@@ -45,6 +45,8 @@ setopt auto_cd              # ディレクトリ名を入力するだけでcdす
 setopt extended_glob        # 拡張グロブを有効にする
 setopt hist_ignore_dups     # ヒストリで重複するコマンドを無視する
 setopt share_history        # ヒストリを共有する
+setopt transient_rprompt    # 右側プロンプトをコピーしないようにする
+setopt hist_ignore_space    # スペースで始まるコマンドをヒストリに保存しない
 
 # 環境ごとの設定を読み込む
 if [ "$(uname)" = 'Darwin' ]; then
