@@ -35,7 +35,7 @@ alias rmtmp='rm -rf ~/tmp/*'
 
 alias mkcd='(){mkdir -p "$1" && cd "$1"}' # mkdirしてcd
 alias grep='grep --color=auto' # grepに色をつける
-alias nix-zsh='nix-shell --run "/bin/zsh" -p' # nixパッケージを入れた状態でシェルを開く
+alias nix-zsh='nix-shell --run "/bin/zsh -l" -p' # nixパッケージを入れた状態でシェルを開く
 alias ll='ls -alF'
 
 # --------
