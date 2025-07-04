@@ -207,6 +207,7 @@ tap homebrew/cask
 cask android-studio
 cask aquaskk
 cask balenaetcher
+cask claude
 cask coteditor
 cask devtoys
 cask docker
