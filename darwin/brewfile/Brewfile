@@ -120,6 +120,7 @@ brew luv
 brew lz4
 brew lzo
 brew m4
+brew maven
 brew mbedtls
 brew mpdecimal
 brew mpfr
@@ -145,6 +146,7 @@ brew p11-kit
 brew p7zip
 brew pango
 brew pcre2
+brew peco
 brew pillow
 brew pinentry
 brew pinentry-mac
@@ -153,6 +155,7 @@ brew pixman
 brew pkgconf
 brew postgresql@14
 brew protobuf
+brew pstree
 brew pugixml
 brew pycparser
 brew pyenv
@@ -186,6 +189,7 @@ brew unbound
 brew unibilium
 brew unzip
 brew utf8proc --HEAD
+brew uv
 brew webp
 brew wimlib
 brew winetricks
@@ -210,11 +214,12 @@ cask balenaetcher
 cask claude
 cask coteditor
 cask devtoys
-cask docker
+cask docker-desktop
 cask dotnet-sdk
 cask font-plemol-jp-nf
 cask ghostty
 cask maccy
+cask nextcloud
 cask rar
 cask raycast
 cask rider

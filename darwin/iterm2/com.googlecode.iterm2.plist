@@ -16,6 +16,10 @@
 	<true/>
 	<key>HotkeyModifiers</key>
 	<integer>1048840</integer>
+	<key>NeverWarnAboutShortLivedSessions_AD06E5DE-B9A8-4C1D-9E90-9F31C8BA949F</key>
+	<true/>
+	<key>NeverWarnAboutShortLivedSessions_AD06E5DE-B9A8-4C1D-9E90-9F31C8BA949F_selection</key>
+	<integer>0</integer>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>

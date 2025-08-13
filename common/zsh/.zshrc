@@ -29,14 +29,16 @@ fi
 # --------
 alias "$"=""
 alias "vi"="nvim"
-alias "cd.."="cd .."
-alias gr='(){cd ~/source/$1}'
+alias "cd.."="cd .."x
 alias rmtmp='rm -rf ~/tmp/*'
 
 alias mkcd='(){mkdir -p "$1" && cd "$1"}' # mkdirしてcd
 alias grep='grep --color=auto' # grepに色をつける
 alias nix-zsh='nix-shell --run "/bin/zsh -l" -p' # nixパッケージを入れた状態でシェルを開く
 alias ll='ls -alF'
+
+alias gcd='cd $(ghq root)/$(ghq list | peco)'
+alias gco='git checkout $(git branch | sed -r "s/^[ \*]+//" | peco)'
 
 # --------
 # Zsh Options
