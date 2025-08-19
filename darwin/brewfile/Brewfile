@@ -56,6 +56,7 @@ brew jbig2dec
 brew jpeg-turbo
 brew jpeg-xl
 brew kind
+brew kompose
 brew kotlin
 brew krb5
 brew kubernetes-cli

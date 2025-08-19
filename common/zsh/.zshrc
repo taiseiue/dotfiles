@@ -37,8 +37,25 @@ alias grep='grep --color=auto' # grepに色をつける
 alias nix-zsh='nix-shell --run "/bin/zsh -l" -p' # nixパッケージを入れた状態でシェルを開く
 alias ll='ls -alF'
 
-alias gcd='cd $(ghq root)/$(ghq list | peco)'
-alias gco='git checkout $(git branch | sed -r "s/^[ \*]+//" | peco)'
+# --------
+# Functions
+# --------
+function _ghq() {
+  if [[ $# -eq 0 ]]; then
+    local selected=$(ghq list | peco)
+    if [[ -n "$selected" ]]; then
+      cd "$(ghq root)/$selected"
+    fi
+  elif [[ "$1" == "checkout" ]]; then
+    local branch=$(git branch | sed 's/^[ \*]*//' | peco)
+    if [[ -n "$branch" ]]; then
+      git checkout "$branch"
+    fi
+  else
+    command ghq "$@"
+  fi
+}
+alias ghq="_ghq"
 
 # --------
 # Zsh Options
