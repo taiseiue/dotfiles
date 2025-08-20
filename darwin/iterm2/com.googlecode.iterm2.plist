@@ -4,6 +4,22 @@
 <dict>
 	<key>Default Bookmark Guid</key>
 	<string>AD06E5DE-B9A8-4C1D-9E90-9F31C8BA949F</string>
+	<key>GlobalKeyMap</key>
+	<dict>
+		<key>0xd-0x20000-0x24</key>
+		<dict>
+			<key>Action</key>
+			<integer>12</integer>
+			<key>Keycode</key>
+			<integer>13</integer>
+			<key>Modifiers</key>
+			<integer>131072</integer>
+			<key>Text</key>
+			<string>\n</string>
+			<key>Version</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
 	<key>HapticFeedbackForEsc</key>
 	<false/>
 	<key>Hotkey</key>
@@ -16,10 +32,6 @@
 	<true/>
 	<key>HotkeyModifiers</key>
 	<integer>1048840</integer>
-	<key>NeverWarnAboutShortLivedSessions_AD06E5DE-B9A8-4C1D-9E90-9F31C8BA949F</key>
-	<true/>
-	<key>NeverWarnAboutShortLivedSessions_AD06E5DE-B9A8-4C1D-9E90-9F31C8BA949F_selection</key>
-	<integer>0</integer>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1299,8 +1311,6 @@
 	</array>
 	<key>PMPrintingPanelSize</key>
 	<string>{777, 828}</string>
-	<key>PasteTabToStringTabStopSize</key>
-	<integer>4</integer>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -1336,8 +1346,6 @@
 	</dict>
 	<key>Print In Black And White</key>
 	<true/>
-	<key>ShowFullScreenTabBar</key>
-	<false/>
 	<key>SoundForEsc</key>
 	<false/>
 	<key>StatusBarPosition</key>

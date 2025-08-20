@@ -2,8 +2,13 @@
 
 export DOTFILES_ROOT="$(cd "$(dirname "$0")" && pwd)"
 
-sed -i '/source \$DOTFILES_ROOT\/common\/zsh\/\.zshrc/d' ~/.zshrc
-sed -i '/source \$DOTFILES_ROOT\/common\/zsh\/\.zshenv/d' ~/.zshenv
+if [ "$(uname)" = 'Darwin' ]; then
+  sed -i '' '/source \$DOTFILES_ROOT\/common\/zsh\/\.zshrc/d' ~/.zshrc
+  sed -i '' '/source \$DOTFILES_ROOT\/common\/zsh\/\.zshenv/d' ~/.zshenv
+else
+  sed -i '/source \$DOTFILES_ROOT\/common\/zsh\/\.zshrc/d' ~/.zshrc
+  sed -i '/source \$DOTFILES_ROOT\/common\/zsh\/\.zshenv/d' ~/.zshenv
+fi
 
 rm -f ~/.config/git
 git config --global --unset core.excludesfile
