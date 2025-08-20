@@ -11,6 +11,6 @@ read ANS
 
 case $ANS in
   [Yy]* )
-    source $DOTFILES_ROOT/.macos
+    source $DOTFILES_ROOT/darwin/.macos
     ;;
 esac
