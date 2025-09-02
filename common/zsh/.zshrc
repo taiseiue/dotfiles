@@ -21,7 +21,11 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
+  pyenv() {
+    unset -f pyenv
+    eval "$($PYENV_ROOT/bin/pyenv init -)"
+    pyenv "$@"
+  }
 fi
 
 # --------

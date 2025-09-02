@@ -1,22 +1,23 @@
 #!/bin/zsh
 
-# --------
-# Completions and autosuggestions
-# --------
 if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-  source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  BREW_PREFIX=$(brew --prefix)
+  # --------
+  # Completions and autosuggestions
+  # --------
+  FPATH=${BREW_PREFIX}/share/zsh-completions:$FPATH
+  source ${BREW_PREFIX}/share/zsh-autosuggestions/zsh-autosuggestions.zsh
   autoload -Uz compinit && compinit
+
+  # --------
+  # Brewfile
+  # --------
+  if [ -f ${BREW_PREFIX}/etc/brew-wrap ];then
+    source ${BREW_PREFIX}/etc/brew-wrap
+  fi
 fi
 
 # --------
 # iTerm2 integration
 # --------
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
-
-# --------
-# Brewfile
-# --------
-if [ -f $(brew --prefix)/etc/brew-wrap ];then
-  source $(brew --prefix)/etc/brew-wrap
-fi
