@@ -1,0 +1,15 @@
+[user]
+	name = taiseiue
+	email = taiseiue@wsnet.jp
+[ghq]
+	root = ~/source
+[core]
+	excludesfile = ~/.config/git/ignore
+    hookspath = ~/.config/git/hooks
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    grep = auto
+[push]
+    default = current

@@ -1,0 +1,81 @@
+#!/bin/bash
+# ユーザーに y/N を問い合わせる。TTY がなければデフォルトで拒否する
+ask_confirm() {
+  local prompt="$1"
+  local default="${2:-N}"  # デフォルトは N
+
+  # 対話可能か確認
+  if [ -t 0 ] || [ -t 1 ] || [ -t 2 ]; then
+    while true; do
+      printf "%s " "$prompt"
+      if ! read -r ans < /dev/tty; then
+        ans=""
+      fi
+      case "$ans" in
+        [Yy]|[Yy][Ee][Ss]) return 0 ;;
+        [Nn]|'' ) return 1 ;;
+        *) printf "y または n を入力してください。\n" ;;
+      esac
+    done
+  else
+    printf "\e[33m非対話モード: %s 省略 (デフォルト: %s)\e[0m\n" "$prompt" "$default"
+    [ "$default" = "Y" ] && return 0 || return 1
+  fi
+}
+
+# Gitのコミット前にコンフリクトマーカーが残っていないか確認する
+check_conflict() {
+  local conflicts_found=0
+  local conflict_output=""
+
+  while IFS= read -r -d '' FILE; do
+    if [ -z "$FILE" ]; then
+      continue
+    fi
+
+    if [ "$FILE" = "common/git/hooks/pre-commit" ]; then # 自分自身は無視
+      continue
+    fi
+
+    if grep -n -E '(<<<<<<<|=======|>>>>>>>)' "$FILE" >/dev/null 2>&1; then
+      conflicts_found=1
+      conflict_output+=$(printf "\e[31m[Error]: %s コンフリクトの対応が残っています\e[0m\n" "$FILE")
+      conflict_output+=$(grep -n -E '(<<<<<<<|=======|>>>>>>>)' "$FILE")
+      conflict_output+=$'\n'
+    fi
+  done < <(git diff --cached --name-only --diff-filter=AMCR -z)
+
+  if [ "$conflicts_found" -eq 1 ]; then
+    printf "%s\n" "$conflict_output"
+    if ask_confirm "コンフリクトマーカーが検出されました。本当にコミットしますか？ [y/N]:" "N"; then
+      return 0
+    else
+      printf "\e[31mコミットを中止します。\e[0m\n"
+      exit 1
+    fi
+  fi
+}
+
+# 保護されていそうなブランチへのコミットを防止する
+check_protected_branch() {
+  local branch
+  branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null) || return 0
+  if [ "$branch" = "HEAD" ]; then
+    return 0
+  fi
+
+  # 対象ブランチ: master, main, develop, release系 (release, release/, release-...)
+  if echo "$branch" | grep -E -q '^(master|main|develop|release([/_-].*)?|release)$'; then
+    printf "\e[33m警告: 現在のブランチは '%s' です。保護ブランチへのコミットを行おうとしています。\e[0m\n" "$branch"
+    if ask_confirm "本当にコミットしますか？ [y/N]:" "N"; then
+      return 0
+    else
+      printf "\e[31mコミットを中止します。\e[0m\n"
+      exit 1
+    fi
+  fi
+}
+
+check_conflict
+check_protected_branch
+exit 0
