@@ -25,6 +25,11 @@ ask_confirm() {
 
 # Gitのコミット前にコンフリクトマーカーが残っていないか確認する
 check_conflict() {
+  # git config --local pre-commit.skip-conflict-checkがtrueならチェックをスキップする
+  if git config --local pre-commit.skip-conflict-check | grep -q -E '^(1|true|yes)$'; then
+    return 0
+  fi
+  
   local conflicts_found=0
   local conflict_output=""
 
@@ -58,6 +63,11 @@ check_conflict() {
 
 # 保護されていそうなブランチへのコミットを防止する
 check_protected_branch() {
+  # git config --local pre-commit.allow-mainpushがtrueならチェックをスキップする
+  if git config --local pre-commit.allow-mainpush | grep -q -E '^(1|true|yes)$'; then
+    return 0
+  fi
+
   local branch
   branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null) || return 0
   if [ "$branch" = "HEAD" ]; then
