@@ -45,18 +45,18 @@ alias ll='ls -alF'
 # Functions
 # --------
 function _ghq() {
-  if [[ $# -eq 0 ]]; then
-    local selected=$(ghq list | peco)
-    if [[ -n "$selected" ]]; then
-      cd "$(ghq root)/$selected"
-    fi
-  elif [[ "$1" == "checkout" ]]; then
-    local branch=$(git branch | sed 's/^[ \*]*//' | peco)
+  if [[ "$1" == "checkout" ]]; then
+    local branch=$(git branch | sed 's/^[ \*]*//' | peco --query "$2" --prompt "branch> ")
     if [[ -n "$branch" ]]; then
       git checkout "$branch"
     fi
-  else
+  elif [[ "$1" == "clone" || "$1" == "list" || "$1" == "rm" || "$1" == "root" || "$1" == "create" ]]; then
     command ghq "$@"
+  else
+    local selected=$(ghq list | peco --query "$1" --prompt "repo> ")
+    if [[ -n "$selected" ]]; then
+      cd "$(ghq root)/$selected"
+    fi
   fi
 }
 alias ghq="_ghq"
