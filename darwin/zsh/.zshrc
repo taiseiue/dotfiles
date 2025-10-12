@@ -12,9 +12,9 @@ if type brew &>/dev/null; then
   # --------
   # Brewfile
   # --------
-  if [ -f ${BREW_PREFIX}/etc/brew-wrap ];then
-    source ${BREW_PREFIX}/etc/brew-wrap
-  fi
+  # if [ -f ${BREW_PREFIX}/etc/brew-wrap ];then
+  #   source ${BREW_PREFIX}/etc/brew-wrap
+  # fi
 fi
 
 # --------

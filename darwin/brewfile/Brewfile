@@ -16,11 +16,9 @@ brew ca-certificates
 brew cabextract
 brew cairo
 brew certifi
-brew cffi
 brew cjson
 brew cloudflared
 brew coreutils
-brew cryptography
 brew curl
 brew dav1d
 brew docker-compose
@@ -34,7 +32,6 @@ brew fribidi
 brew gcc
 brew gettext
 brew gh
-brew ghostscript
 brew giflib
 brew glib
 brew gmp
@@ -54,7 +51,6 @@ brew imagemagick
 brew imath
 brew isl
 brew jasper
-brew jbig2dec
 brew jpeg-turbo
 brew jpeg-xl
 brew kind
@@ -68,6 +64,7 @@ brew leptonica
 brew libarchive
 brew libass
 brew libassuan
+brew libavif
 brew libb2
 brew libbluray
 brew libde265
@@ -77,7 +74,6 @@ brew libgcrypt
 brew libgit2
 brew libgpg-error
 brew libheif
-brew libidn
 brew libidn2
 brew libimagequant
 brew libksba
@@ -86,6 +82,8 @@ brew liblqr
 brew libmicrohttpd
 brew libmpc
 brew libnghttp2
+brew libnghttp3
+brew libngtcp2
 brew libogg
 brew libomp
 brew libpng
@@ -101,6 +99,7 @@ brew libssh2
 brew libtasn1
 brew libtiff
 brew libtool
+brew libudfread
 brew libunibreak
 brew libunistring
 brew libusb
@@ -133,6 +132,7 @@ brew n
 brew ncurses
 brew neovim
 brew nettle
+brew nlohmann-json
 brew nmap
 brew npth
 brew numpy
@@ -144,6 +144,7 @@ brew openexr
 brew openjdk
 brew openjdk@17
 brew openjpeg
+brew openjph
 brew openssl@3
 brew openvino
 brew opus
@@ -153,6 +154,7 @@ brew pango
 brew pcre2
 brew peco
 brew pillow
+brew pinact
 brew pinentry
 brew pinentry-mac
 brew pipx
@@ -162,7 +164,6 @@ brew postgresql@14
 brew protobuf
 brew pstree
 brew pugixml
-brew pycparser
 brew pyenv
 brew python-matplotlib
 brew python-packaging
@@ -180,6 +181,7 @@ brew sdl2
 brew shared-mime-info
 brew sl
 brew snappy
+brew socat
 brew speex
 brew sqlite
 brew srt
@@ -229,6 +231,7 @@ cask rar
 cask raycast
 cask rider
 cask unity-hub
+cask xquartz
 
 tap homebrew/services
 
