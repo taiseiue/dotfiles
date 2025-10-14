@@ -26,6 +26,10 @@ alias grep='grep --color=auto' # grepに色をつける
 alias nix-zsh='nix-shell --run "/bin/zsh -l" -p' # nixパッケージを入れた状態でシェルを開く
 alias ll='ls -alF'
 
+alias home-apply="home-manager switch --flake $(dirname $0)/../../home-manager/flake.nix"
+alias home-update="(){cd $(dirname $0)/../../home-manager && nix flake update && home-manager switch}"
+alias home-clean="nix-collect-garbage -d"
+
 # --------
 # Functions
 # --------

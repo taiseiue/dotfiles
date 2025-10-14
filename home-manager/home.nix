@@ -17,6 +17,8 @@
     gh
     ghq
     peco
+    uv
+    pnpm
   ];
 
 
