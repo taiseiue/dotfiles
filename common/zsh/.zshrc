@@ -27,7 +27,7 @@ alias nix-zsh='nix-shell --run "/bin/zsh -l" -p' # nixパッケージを入れ�
 alias ll='ls -alF'
 
 alias home-apply="home-manager switch --flake $(dirname $0)/../../home-manager/flake.nix"
-alias home-update="(){cd $(dirname $0)/../../home-manager && nix flake update && home-manager switch}"
+alias home-update="(){cd $(dirname $0)/../../home-manager && nix flake update --flake ./flake.nix && home-manager switch --flake ./flake.nix}"
 alias home-clean="nix-collect-garbage -d"
 
 # --------
