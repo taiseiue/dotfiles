@@ -19,6 +19,7 @@
     peco
     uv
     pnpm
+    coreutils-full
   ];
 
 
