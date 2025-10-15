@@ -25,6 +25,7 @@
     imagemagick
     ffmpeg
     go
+    cloudflared
   ];
 
 
