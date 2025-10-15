@@ -19,6 +19,8 @@
     peco
     uv
     pnpm
+    gcc
+    curl
     coreutils-full
   ];
 
