@@ -22,6 +22,9 @@
     gcc
     curl
     coreutils-full
+    imagemagick
+    ffmpeg
+    go
   ];
 
 
