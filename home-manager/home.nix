@@ -9,6 +9,7 @@
 
   imports = [
     ./modules/nvim.nix
+    ./modules/zsh.nix
   ];
 
   home.packages =  with pkgs; [
