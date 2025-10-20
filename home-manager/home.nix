@@ -10,6 +10,7 @@
   imports = [
     ./modules/nvim.nix
     ./modules/zsh.nix
+    ./modules/tmux.nix
   ];
 
   home.packages =  with pkgs; [
