@@ -27,6 +27,7 @@
     ffmpeg
     go
     cloudflared
+    go-task
   ];
 
 
