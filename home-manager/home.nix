@@ -11,10 +11,10 @@
     ./modules/nvim.nix
     ./modules/zsh.nix
     ./modules/tmux.nix
+    ./modules/git.nix
   ];
 
   home.packages =  with pkgs; [
-    git
     gh
     ghq
     peco
