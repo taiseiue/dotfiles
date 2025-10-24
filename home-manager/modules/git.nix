@@ -3,17 +3,17 @@
 {
   programs.git.enable = true;
 
-  programs.git.userName  = "taiseiue";
-  programs.git.userEmail = "taiseiue@wsnet.jp";
+  programs.git.settings.userName  = "taiseiue";
+  programs.git.settings.userEmail = "taiseiue@wsnet.jp";
 
-  programs.git.aliases = {
+  programs.git.settings.aliases = {
     co = "checkout";
     br = "branch";
     ci = "commit";
     st = "status";
   };
 
-  programs.git.extraConfig = {
+  programs.git.settings.extraConfig = {
     ghq.root = "~/source";
     
     core.excludesfile = "~/.config/git/ignore";
