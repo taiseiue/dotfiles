@@ -3,8 +3,8 @@
 {
   programs.git.enable = true;
 
-  programs.git.settings.userName  = "taiseiue";
-  programs.git.settings.userEmail = "taiseiue@wsnet.jp";
+  programs.git.settings.user.name  = "taiseiue";
+  programs.git.settings.user.email = "taiseiue@wsnet.jp";
 
   programs.git.settings.aliases = {
     co = "checkout";
