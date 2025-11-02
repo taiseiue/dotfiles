@@ -12,6 +12,7 @@
     ./modules/zsh.nix
     ./modules/tmux.nix
     ./modules/git.nix
+    ./modules/fonts.nix
   ];
 
   home.packages =  with pkgs; [
@@ -28,6 +29,7 @@
     go
     cloudflared
     go-task
+    m-cli
   ];
 
 
