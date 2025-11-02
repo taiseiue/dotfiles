@@ -2,6 +2,7 @@
 
 let
   isMac = pkgs.stdenv.isDarwin;
+in
 {
   programs.git.enable = true;
 
