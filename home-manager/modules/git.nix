@@ -1,5 +1,7 @@
 { config, pkgs, ... }:
 
+let
+  isMac = pkgs.stdenv.isDarwin;
 {
   programs.git.enable = true;
 
@@ -13,17 +15,31 @@
     st = "status";
   };
 
-  programs.git.settings.extraConfig = {
-    ghq.root = "~/source";
-    
-    core.excludesfile = "~/.config/git/ignore";
-    core.hookspath    = "~/.config/git/hooks";
+  programs.git.settings.core = {
+    excludesfile = "~/.config/git/ignore";
+    hookspath    = "~/.config/git/hooks";
+  };
 
-    color.diff   = "auto";
-    color.status = "auto";
-    color.branch = "auto";
-    color.grep   = "auto";
+  programs.git.settings.ghq = {
+    root = "~/source";
+  };
+  
+  programs.git.settings.color = {
+    diff   = "auto";
+    status = "auto";
+    branch = "auto";
+    grep   = "auto";
+  }; 
 
-    push.default = "current";
+  programs.git.settings.pull = {
+    rebase = "false";
+  };
+  programs.git.settings.push = {
+    default = "current";
+  };
+  
+  programs.git.settings.gpg.ssh =  pkgs.lib.mkIf isMac {
+    # macOSなら、SSHは1PasswordのSSHエージェントを使う
+    program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign";
   };
 }
