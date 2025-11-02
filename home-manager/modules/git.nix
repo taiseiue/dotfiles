@@ -6,8 +6,19 @@ in
 {
   programs.git.enable = true;
 
-  programs.git.settings.user.name  = "taiseiue";
-  programs.git.settings.user.email = "taiseiue@wsnet.jp";
+  programs.git.settings.user = {
+    name = "taiseiue";
+    email = "taiseiue@wsnet.jp";
+    signingkey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGlgPD2+ahEVUXRvZJ+DlPti2UYY1FMR4GRg5u4nX46v";
+  };
+
+  programs.git.settings.commit = {
+    gpgsign = true;
+  };
+
+  programs.git.settings.gpg = {
+    format = "ssh";
+  };
 
   programs.git.settings.aliases = {
     co = "checkout";
