@@ -25,7 +25,7 @@
     curl
     coreutils-full
     imagemagick
-    ffmpeg
+    ffmpeg-full
     go
     cloudflared
     go-task
