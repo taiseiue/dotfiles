@@ -18,6 +18,7 @@
   home.packages =  with pkgs; [
     gh
     ghq
+    git-filter-repo
     peco
     uv
     pnpm
