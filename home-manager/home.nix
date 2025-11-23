@@ -31,6 +31,7 @@
     cloudflared
     go-task
     m-cli
+    primitive
   ];
 
 
