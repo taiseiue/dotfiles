@@ -1,19 +1,4 @@
-{ config, pkgs, ... }:
 
-{
-  programs.zsh = {
-    enable = true;
-    autosuggestion.enable = true;
-    enableCompletion = true;
-    syntaxHighlighting.enable = true;
-
-    envExtra = ''
-    if [ "$(uname)" = 'Darwin' ]; then
-      export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
-    fi
-    '';
-
-    initContent = ''
     alias "$"=""
     alias "vi"="nvim"
     alias "cd.."="cd .."x
@@ -45,6 +30,4 @@
     }
     alias ghq="_ghq"
     echo -e Welcome to "\033[1;31m`hostname`\033[0;39m", it\'s "\033[1;32m`date "+%Y/%m/%d"`\033[0;39m" 
-    '';
-  };
-}
+    
