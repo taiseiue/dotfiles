@@ -12,7 +12,7 @@ in
 
   imports = [
     ./modules/nvim.nix
-    ./modules/zsh.nix
+    ./modules/zsh/zsh.nix
     ./modules/tmux.nix
     ./modules/git.nix
     ./modules/fonts.nix
