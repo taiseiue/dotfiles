@@ -1,5 +1,8 @@
 { config, pkgs, ... }:
 
+let
+  isMac = pkgs.stdenv.isDarwin;
+in
 {
   home.username = "taiseiue";
   home.homeDirectory = "/Users/taiseiue";
