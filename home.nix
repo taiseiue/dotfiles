@@ -38,7 +38,7 @@ in
   ];
 
   home.file = {
-    ".zshrc_local".source = ./zsh/.zshrc;
+    ".zshrc_local".source = ./zsh/.zshrc_local;
   };
 
   home.sessionVariables = pkgs.lib.mkIf isMac {
