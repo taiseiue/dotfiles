@@ -16,13 +16,14 @@ in
     ./modules/tmux.nix
     ./modules/git.nix
     ./modules/fonts.nix
+    ./modules/zoxide.nix
   ];
 
   home.packages =  with pkgs; [
     gh
     ghq
     git-filter-repo
-    peco
+    fzf
     uv
     pnpm
     gcc
