@@ -36,6 +36,8 @@ in
     go-task
     m-cli
     primitive
+    jdk25
+    gradle
   ];
 
   home.file = {
