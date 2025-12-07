@@ -10,7 +10,7 @@
     alias ll='ls -alF'
 
     alias home-apply="home-manager switch --flake ./"
-    alias home-update="(){nix flake update --flake ./&& home-manager switch --flake ./}"
+    alias home-update="(){nix flake update --flake ./ && git commit -am 'Update flake' && home-manager switch --flake ./}"
     alias home-clean="nix-collect-garbage -d"
 
     function _ghq() {
