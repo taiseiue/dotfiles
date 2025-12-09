@@ -6,13 +6,7 @@
 
     alias mkcd='(){mkdir -p "$1" && cd "$1"}' # mkdirしてcd
     alias grep='grep --color=auto' # grepに色をつける
-    alias nix-zsh='nix-shell --run "/bin/zsh -l" -p' # nixパッケージを入れた状態でシェルを開く
     alias ll='ls -alF'
-
-    alias home-apply="home-manager switch --flake ./"
-    alias home-update="(){nix flake update --flake ./ && git commit -am 'Update flake' && home-manager switch --flake ./}"
-    alias home-clean="nix-collect-garbage -d"
-
     function _ghq() {
     if [[ "$1" == "checkout" ]]; then
         local branch=$(git branch | sed 's/^[ \*]*//' | fzf --query "$2" --prompt "branch> ")
