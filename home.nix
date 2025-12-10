@@ -2,6 +2,9 @@
 
 let
   isMac = pkgs.stdenv.isDarwin;
+  macPackages = pkgs.lib.mkIf isMac [
+    pkgs.m-cli
+  ];
 in
 {
   home.username = "taiseiue";
@@ -19,10 +22,6 @@ in
     ./modules/zoxide.nix
   ];
 
-  macPackages = pkgs.lib.mkIf isMac [
-    pkgs.m-cli
-  ];
-  
   home.packages = pkgs.lib.flatten (
     (with pkgs; [
     gh ghq git-filter-repo
