@@ -23,29 +23,22 @@ in
     m-cli
   ];
 
-  home.packages =  pkgs.lib.flatten([
-    gh
-    ghq
-    git-filter-repo
-    fzf
+  home.packages = pkgs.lib.flatten (
+    (with pkgs; [
+    gh ghq git-filter-repo
+    coreutils-full gcc curl fzf go-task
+    awscli google-cloud-sdk
+    imagemagick ffmpeg-full primitive
+    jdk25 gradle
     uv
     pnpm
-    gcc
-    curl
-    coreutils-full
-    imagemagick
-    ffmpeg-full
     go
     cloudflared
-    go-task
-    primitive
-    jdk25
-    gradle
     _1password-cli
-    awscli
     claude
-    google-cloud-sdk
-  ] ++ macPackages);
+    ])
+    ++ macPackages
+  );
 
   home.file = {
     #"default.zshrc".source = ./modules/zsh/default.zshrc;
