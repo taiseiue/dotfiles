@@ -34,6 +34,10 @@
               fi
           fi
         }
+      if [ -f "$HOME/.local.zshrc" ]; then
+        source "$HOME/.local.zshrc"
+      fi
+      echo -e Welcome to "\033[1;31m`hostname`\033[0;39m", it\'s "\033[1;32m`date "+%Y/%m/%d"`\033[0;39m" 
       '';
     };
 }
