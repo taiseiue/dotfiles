@@ -20,9 +20,9 @@ in
   ];
 
   macPackages = pkgs.lib.mkIf isMac [
-    m-cli
+    pkgs.m-cli
   ];
-
+  
   home.packages = pkgs.lib.flatten (
     (with pkgs; [
     gh ghq git-filter-repo
