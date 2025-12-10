@@ -19,10 +19,12 @@ in
     ./modules/zoxide.nix
   ];
 
-  home.packages =  with pkgs; [
-    gh
-    ghq
-    git-filter-repo
+  macPackages = pkgs.lib.mkIf isMac [
+    m-cli
+  ];
+
+  home.packages =  pkgs.lib.flatten([
+    gh ghq git-filter-repo
     fzf
     uv
     pnpm
@@ -34,14 +36,17 @@ in
     go
     cloudflared
     go-task
-    m-cli
     primitive
     jdk25
     gradle
-  ];
+    _1password-cli
+    awscli
+    claude
+    google-cloud-sdk
+  ] ++ macPackages);
 
   home.file = {
-    ".zshrc_local".source = ./modules/zsh/.zshrc_local;
+    #"default.zshrc".source = ./modules/zsh/default.zshrc;
   };
 
   home.sessionVariables = pkgs.lib.mkIf isMac {
