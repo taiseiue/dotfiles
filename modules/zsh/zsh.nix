@@ -12,7 +12,7 @@
       vi = "nvim";
       ll = "ls -alF";
       grep = "grep --color=auto";
-      _ghq = "_ghq";
+      ghq = "_ghq";
     };
 
     initContent = ''
