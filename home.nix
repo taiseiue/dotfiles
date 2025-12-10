@@ -34,9 +34,11 @@ in
     go
     cloudflared
     _1password-cli
-    claude
+    claude-code
     ])
-    ++ macPackages
+    ++ (if isMac then [
+      pkgs.m-cli
+    ] else [])
   );
 
   home.file = {
@@ -44,7 +46,7 @@ in
   };
 
   home.sessionVariables = pkgs.lib.mkIf isMac {
-    SSH_AUTH_SOCK="~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock";
+    SSH_AUTH_SOCK="${config.home.homeDirectory}/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock";
   };
 
   programs.home-manager.enable = true;
