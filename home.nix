@@ -24,7 +24,9 @@ in
   ];
 
   home.packages =  pkgs.lib.flatten([
-    gh ghq git-filter-repo
+    gh
+    ghq
+    git-filter-repo
     fzf
     uv
     pnpm
