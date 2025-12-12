@@ -34,6 +34,7 @@
               fi
           fi
         }
+      source <(fzf --zsh)
       if [ -f "$HOME/.local.zshrc" ]; then
         source "$HOME/.local.zshrc"
       fi
