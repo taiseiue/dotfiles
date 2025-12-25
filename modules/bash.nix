@@ -10,7 +10,8 @@
       vi = "nvim";
       ll = "ls -alF";
       grep = "grep --color=auto";
-      ghq = "g";
+      g = "_ghq";
+      ghq = "_ghq";
     };
 
     bashrcExtra = ''
