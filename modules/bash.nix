@@ -6,7 +6,6 @@
     enableCompletion = true;
 
     shellAliases = {
-      "$" = "";
       "cd.." = "cd ..";
       vi = "nvim";
       ll = "ls -alF";
