@@ -36,6 +36,7 @@ in
     cloudflared
     _1password-cli
     claude-code
+    wezterm
     ])
     ++ (if isMac then [
       pkgs.m-cli
