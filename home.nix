@@ -15,7 +15,8 @@ in
 
   imports = [
     ./modules/nvim.nix
-    ./modules/zsh/zsh.nix
+    ./modules/zsh.nix
+    ./modules/bash.nix
     ./modules/tmux.nix
     ./modules/git.nix
     ./modules/fonts.nix
