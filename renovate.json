@@ -1,5 +1,6 @@
 {
   "extends": ["config:recommended"],
+  "assignees": ["taiseiue"],
   "nix": {
     "enabled": true
   },
