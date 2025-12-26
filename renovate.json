@@ -1,0 +1,12 @@
+{
+  "extends": ["config:recommended"],
+  "nix": {
+    "enabled": true
+  },
+  "packageRules": [
+    {
+      "matchManagers": ["nix"],
+      "groupName": "nix flake inputs"
+    }
+  ]
+}
