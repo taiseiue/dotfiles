@@ -40,7 +40,7 @@ in
     ])
     ++ (if isMac then [
       pkgs.m-cli
-      pkgs.xquartz
+      pkgs.audacity
     ] else [])
   );
 
