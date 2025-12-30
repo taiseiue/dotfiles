@@ -40,6 +40,7 @@ in
     ])
     ++ (if isMac then [
       pkgs.m-cli
+      pkgs.xquartz
     ] else [])
   );
 
