@@ -33,7 +33,7 @@ in
     uv
     pnpm
     go
-    cloudflared
+    cloudflared wrangler
     _1password-cli
     claude-code
     wezterm
