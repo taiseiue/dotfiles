@@ -37,7 +37,7 @@ in
     _1password-cli
     claude-code
     wezterm
-    inkscape
+    inkscape-with-extensions
     ])
     ++ (if isMac then [
       pkgs.m-cli
