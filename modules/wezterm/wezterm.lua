@@ -27,18 +27,6 @@ config.initial_rows = 34
 -- Scrollback
 config.scrollback_lines = 10000
 
--- Ctrl+Backspace deletes a word
-config.keys = {
-  {
-    key = 'Backspace',
-    mods = 'CTRL',
-    action = wezterm.action.SendKey {
-      key = 'w',
-      mods = 'CTRL',
-    },
-  },
-}
-
 -- Tmux bindings
 config.leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 1000 }
 
@@ -55,6 +43,11 @@ config.keys = {
 
   -- ペイン閉じる
   { key = 'x', mods = 'LEADER', action = wezterm.action.CloseCurrentPane { confirm = true } },
+
+  -- 単語単位操作
+  { key = "LeftArrow",  mods = "ALT", action = wezterm.action.SendKey { key = "b", mods = "META" } },
+  { key = "RightArrow", mods = "ALT", action = wezterm.action.SendKey { key = "f", mods = "META" } },
+  { key = "Backspace",  mods = "ALT", action = wezterm.action.SendKey { key = "Backspace", mods = "META" } },
 }
 
 -- macのOptionキーをAltキーにする
