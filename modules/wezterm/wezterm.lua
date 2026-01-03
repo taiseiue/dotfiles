@@ -9,7 +9,7 @@ config.font = wezterm.font_with_fallback {
 config.font_size = 13.0
 
 -- Color Scheme
-config.color_scheme = "Catppuccin Mocha"
+config.color_scheme = "Tokyo Night"
 
 -- Transparency and Blur
 config.window_background_opacity = 0.92
@@ -37,6 +37,24 @@ config.keys = {
       mods = 'CTRL',
     },
   },
+}
+
+-- Tmux bindings
+config.leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 1000 }
+
+config.keys = {
+  -- ペイン分割
+  { key = '"', mods = 'LEADER|SHIFT', action = wezterm.action.SplitVertical },
+  { key = '%', mods = 'LEADER|SHIFT', action = wezterm.action.SplitHorizontal },
+
+  -- ペイン移動
+  { key = 'h', mods = 'LEADER', action = wezterm.action.ActivatePaneDirection 'Left' },
+  { key = 'j', mods = 'LEADER', action = wezterm.action.ActivatePaneDirection 'Down' },
+  { key = 'k', mods = 'LEADER', action = wezterm.action.ActivatePaneDirection 'Up' },
+  { key = 'l', mods = 'LEADER', action = wezterm.action.ActivatePaneDirection 'Right' },
+
+  -- ペイン閉じる
+  { key = 'x', mods = 'LEADER', action = wezterm.action.CloseCurrentPane { confirm = true } },
 }
 
 return config
