@@ -21,6 +21,7 @@ in
     ./modules/git.nix
     ./modules/fonts.nix
     ./modules/zoxide.nix
+    ./modules/wezterm/wezterm.nix
   ];
 
   home.packages = pkgs.lib.flatten (
@@ -36,7 +37,6 @@ in
     cloudflared wrangler
     _1password-cli
     claude-code
-    wezterm
     ])
     ++ (if isMac then [
       pkgs.m-cli
