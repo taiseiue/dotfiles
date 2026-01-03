@@ -34,7 +34,7 @@ in
     uv
     pnpm
     go
-    cloudflared wrangler
+    cloudflared
     _1password-cli
     claude-code
     ])
