@@ -6,7 +6,7 @@ local config = {}
 config.font = wezterm.font_with_fallback {
   "PlemolJP Console NF",
 }
-config.font_size = 13.0
+config.font_size = 21
 
 -- Color Scheme
 config.color_scheme = "Tokyo Night"
@@ -56,5 +56,9 @@ config.keys = {
   -- ペイン閉じる
   { key = 'x', mods = 'LEADER', action = wezterm.action.CloseCurrentPane { confirm = true } },
 }
+
+-- macのOptionキーをAltキーにする
+config.send_composed_key_when_left_alt_is_pressed = true
+config.send_composed_key_when_right_alt_is_pressed = true
 
 return config
