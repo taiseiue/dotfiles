@@ -12,7 +12,7 @@ config.font_size = 21
 config.color_scheme = "Tokyo Night"
 
 -- Transparency and Blur
-config.window_background_opacity = 0.92
+config.window_background_opacity = 0.6
 config.macos_window_background_blur = 20
 
 -- Tab Bar
