@@ -20,7 +20,7 @@ config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 config.window_padding = {
   left = 6,
   right = 6,
-  top = 24,
+  top = 30,
   bottom = 6,
 }
 
