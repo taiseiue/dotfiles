@@ -9,10 +9,10 @@ config.font = wezterm.font_with_fallback {
 config.font_size = 21
 
 -- Color Scheme
-config.color_scheme = "Tokyo Night"
+config.color_scheme = "Tango (terminal.sexy)"
 
 -- Transparency and Blur
-config.window_background_opacity = 0.6
+config.window_background_opacity = 0.8
 config.macos_window_background_blur = 20
 
 -- Tab Bar
