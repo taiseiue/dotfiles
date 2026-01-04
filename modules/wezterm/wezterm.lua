@@ -24,8 +24,8 @@ config.use_fancy_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = true
 
 -- Initial Size
-config.initial_cols = 120
-config.initial_rows = 34
+config.initial_cols = 90
+config.initial_rows = 20
 
 -- Scrollback
 config.scrollback_lines = 10000
