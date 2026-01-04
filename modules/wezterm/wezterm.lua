@@ -12,11 +12,11 @@ config.font_size = 21
 config.color_scheme = "Tango (terminal.sexy)"
 
 -- Transparency and Blur
-config.window_background_opacity = 0.8
+config.window_background_opacity = 0.6
 config.macos_window_background_blur = 20
 
 -- Window Decorations
-config.window_decorations = "RESIZE"
+config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 
 -- Tab Bar
 config.enable_tab_bar = true
