@@ -44,6 +44,13 @@ config.keys = {
   -- ペイン閉じる
   { key = 'x', mods = 'LEADER', action = wezterm.action.CloseCurrentPane { confirm = true } },
 
+  -- タブ移動
+  { key = 'n', mods = 'LEADER', action = wezterm.action.ActivateTabRelative(1) },
+  { key = 'p', mods = 'LEADER', action = wezterm.action.ActivateTabRelative(-1) },
+  -- タブ移動(iTerm2)
+  { key = 'LeftArrow' , mods = 'LEADER', action = wezterm.action.ActivateTabRelative(-1) },
+  { key = 'RightArrow', mods = 'LEADER', action = wezterm.action.ActivateTabRelative(1) },
+
   -- 単語単位操作
   { key = "LeftArrow",  mods = "ALT", action = wezterm.action.SendKey { key = "b", mods = "META" } },
   { key = "RightArrow", mods = "ALT", action = wezterm.action.SendKey { key = "f", mods = "META" } },
