@@ -17,12 +17,6 @@ config.macos_window_background_blur = 20
 
 -- Window Decorations
 config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
-config.window_padding = {
-  left = 6,
-  right = 6,
-  top = 30,
-  bottom = 6,
-}
 
 -- Tab Bar
 config.enable_tab_bar = true
