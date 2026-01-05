@@ -17,6 +17,7 @@ function _ghq() {
   fi
 }
 
+zle -N _ghq
 bindkey "^g" _ghq
 
 source <(fzf --zsh)
