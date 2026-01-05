@@ -26,6 +26,7 @@ in
 
   home.packages = pkgs.lib.flatten (
     (with pkgs; [
+    zsh-fzf-history-search zsh-fzf-tab
     gh ghq git-filter-repo
     coreutils-full gcc curl fzf go-task
     awscli google-cloud-sdk

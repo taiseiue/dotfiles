@@ -16,7 +16,12 @@ function _ghq() {
       fi
   fi
 }
+
+zle -N _ghq
+bindkey "^g" _ghq
+
 source <(fzf --zsh)
+
 if [ -f "$HOME/.local.zshrc" ]; then
   source "$HOME/.local.zshrc"
 fi
