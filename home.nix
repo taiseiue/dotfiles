@@ -32,6 +32,7 @@ in
     awscli google-cloud-sdk
     imagemagick ffmpeg-full primitive
     jdk25 gradle
+    openssl
     uv
     pnpm
     go
