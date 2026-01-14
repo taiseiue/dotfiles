@@ -12,7 +12,7 @@ config.font_size = 21
 config.color_scheme = "Tango (terminal.sexy)"
 
 -- Transparency and Blur
-config.window_background_opacity = 0.6
+config.window_background_opacity = 0.7
 config.macos_window_background_blur = 40
 
 -- Window Decorations
