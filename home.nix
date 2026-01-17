@@ -30,7 +30,7 @@ in
     gh ghq git-filter-repo
     coreutils-full gcc curl fzf go-task
     awscli google-cloud-sdk
-    imagemagick ffmpeg-full primitive
+    imagemagick ffmpeg-full ffmpeg.lib primitive
     jdk25 gradle
     openssl
     uv
