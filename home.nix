@@ -42,7 +42,6 @@ in
     ])
     ++ (if isMac then [
       pkgs.m-cli
-      pkgs.audacity
       pkgs.chatgpt
     ] else [])
   );
