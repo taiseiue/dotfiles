@@ -39,6 +39,7 @@ in
     cloudflared
     _1password-cli
     claude-code
+    minicom
     ])
     ++ (if isMac then [
       pkgs.m-cli
