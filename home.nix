@@ -16,11 +16,11 @@ in
   imports = [
     ./modules/nvim.nix
     ./modules/tmux.nix
-    ./modules/git.nix
     ./modules/fonts.nix
     ./modules/zoxide.nix
     ./modules/zsh/zsh.nix
     ./modules/bash/bash.nix
+    ./modules/git/git.nix
     ./modules/wezterm/wezterm.nix
   ];
 

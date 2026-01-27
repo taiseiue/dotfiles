@@ -54,4 +54,12 @@ in
     # macOSなら、SSHは1PasswordのSSHエージェントを使う
     program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign";
   };
+
+  home.file = {
+    ".config/git/ignore".source = ./ignore;
+    ".config/git/hooks/pre-commit" = {
+      source = ./hooks/pre-commit.sh;
+      executable = true;
+    };
+  };
 }
