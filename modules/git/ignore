@@ -40,3 +40,6 @@ $RECYCLE.BIN/
 *.swn
 *.un~
 Session.vim
+
+# Claude
+.claude/settings.local.json
