@@ -15,6 +15,13 @@
       g = "_ghq";
       ghq = "_ghq";
     };
+    plugins = [
+      {
+        name = "zsh-abbr";
+        src = "${pkgs.zsh-abbr}/share/zsh/zsh-abbr";
+        file = "zsh-abbr.plugin.zsh";
+      }
+    ];
 
     initContent = builtins.readFile ./zshrc.sh;
   };
