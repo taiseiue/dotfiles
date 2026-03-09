@@ -9,7 +9,7 @@ in
 {
   home.username = "taiseiue";
   home.homeDirectory = "/Users/taiseiue";
-  home.stateVersion = "25.11"; 
+  home.stateVersion = "25.11";
 
   nixpkgs.config.allowUnfree = true;
 
@@ -20,32 +20,49 @@ in
     ./modules/zoxide.nix
     ./modules/zsh/zsh.nix
     ./modules/bash/bash.nix
+    ./modules/node/node.nix
     ./modules/git/git.nix
     ./modules/wezterm/wezterm.nix
   ];
 
   home.packages = pkgs.lib.flatten (
     (with pkgs; [
-    zsh-fzf-history-search zsh-fzf-tab
-    gh ghq git-filter-repo
-    coreutils-full gcc curl fzf go-task
-    awscli google-cloud-sdk
-    imagemagick ffmpeg-full ffmpeg-full.lib
-    jdk25 gradle
-    openssl
-    uv
-    pnpm
-    go
-    cloudflared
-    _1password-cli
-    claude-code
-    minicom
-    nixfmt
+      zsh-fzf-history-search
+      zsh-fzf-tab
+      gh
+      ghq
+      git-filter-repo
+      coreutils-full
+      gcc
+      curl
+      fzf
+      go-task
+      awscli
+      google-cloud-sdk
+      imagemagick
+      ffmpeg-full
+      ffmpeg-full.lib
+      jdk25
+      gradle
+      openssl
+      uv
+      pnpm
+      go
+      cloudflared
+      _1password-cli
+      claude-code
+      minicom
+      nixfmt
     ])
-    ++ (if isMac then [
-      pkgs.m-cli
-      pkgs.chatgpt
-    ] else [])
+    ++ (
+      if isMac then
+        [
+          pkgs.m-cli
+          pkgs.chatgpt
+        ]
+      else
+        [ ]
+    )
   );
 
   home.file = {
@@ -53,7 +70,7 @@ in
   };
 
   home.sessionVariables = pkgs.lib.mkIf isMac {
-    SSH_AUTH_SOCK="${config.home.homeDirectory}/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock";
+    SSH_AUTH_SOCK = "${config.home.homeDirectory}/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock";
   };
 
   programs.home-manager.enable = true;
