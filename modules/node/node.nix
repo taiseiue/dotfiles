@@ -1,15 +1,9 @@
 { config, pkgs, ... }:
 
 {
-  programs.nodejs_24 = {
-    enable = true;
-    nodePackages = with pkgs.nodePackages; [
-      typescript
-      ts-node
-      tsx
-      eslint
-      prettier
-      wrangler
-    ];
-  };
+  home.packages = with pkgs; [
+    nodejs_24
+    pnpm
+    nodePackages.wrangler
+  ];
 }
