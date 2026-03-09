@@ -20,7 +20,6 @@ in
     ./modules/zoxide.nix
     ./modules/zsh/zsh.nix
     ./modules/bash/bash.nix
-    ./modules/node/node.nix
     ./modules/git/git.nix
     ./modules/wezterm/wezterm.nix
   ];
@@ -47,6 +46,7 @@ in
       openssl
       uv
       pnpm
+      nodejs_24
       go
       cloudflared
       _1password-cli
