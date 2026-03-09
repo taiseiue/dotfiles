@@ -40,7 +40,7 @@ in
     _1password-cli
     claude-code
     minicom
-    nxfmt
+    nixfmt
     ])
     ++ (if isMac then [
       pkgs.m-cli
