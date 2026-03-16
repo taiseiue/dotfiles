@@ -59,6 +59,7 @@ in
         [
           pkgs.m-cli
           pkgs.chatgpt
+	  pkgs.colima
         ]
       else
         [ ]
