@@ -59,7 +59,7 @@ in
         [
           pkgs.m-cli
           pkgs.chatgpt
-	  pkgs.colima
+          pkgs.colima
         ]
       else
         [ ]
@@ -70,9 +70,14 @@ in
     #"default.zshrc".source = ./modules/zsh/default.zshrc;
   };
 
-  home.sessionVariables = pkgs.lib.mkIf isMac {
-    SSH_AUTH_SOCK = "${config.home.homeDirectory}/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock";
-  };
+  home.sessionVariables = pkgs.lib.mkMerge [
+    (pkgs.lib.mkIf isMac {
+      SSH_AUTH_SOCK = "${config.home.homeDirectory}/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock";
+    })
+    {
+      FZF_DEFAULT_OPTS = "--height ~40% --layout=reverse --border";
+    }
+  ];
 
   programs.home-manager.enable = true;
 }
