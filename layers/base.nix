@@ -25,7 +25,7 @@
     curl
     fzf
     go-task
-    awscli
+    awscli2
     google-cloud-sdk
     imagemagick
     ffmpeg-full
