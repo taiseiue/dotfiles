@@ -3,6 +3,7 @@
   imports = [
     ./base.nix
     ../modules/fonts.nix
+    ../modules/colima/colima.nix
     ../modules/wezterm/wezterm.nix
   ];
 
@@ -12,7 +13,6 @@
   home.packages = with pkgs; [
     m-cli
     chatgpt
-    colima
     _1password-cli
   ];
 
