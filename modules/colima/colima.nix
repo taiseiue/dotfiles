@@ -4,7 +4,7 @@
     colima
   ];
   home.file = {
-    "~/.colima/default/colima.yaml".source = ./profiles/default.yaml;
-    "~/.colima/heavy/colima.yaml".source = ./profiles/heavy.yaml;
+    ".colima/default/colima.yaml".source = ./profiles/default.yaml;
+    ".colima/heavy/colima.yaml".source = ./profiles/heavy.yaml;
   };
 }
