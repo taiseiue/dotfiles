@@ -1,0 +1,15 @@
+version: '3'
+
+tasks:
+  update:
+    cmds:
+      - nix flake update --flake ./ && git commit -am "Update flake lock" && git push
+  switch:darwin:
+    cmds:
+      - home-manager switch --flake .#taiseiue@darwin
+  switch:linux:
+    cmds:
+      - home-manager switch --flake .#taiseiue@linux
+  switch:mac:
+    cmds:
+      - task: switch:darwin
