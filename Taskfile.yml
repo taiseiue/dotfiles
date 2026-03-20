@@ -1,9 +1,9 @@
 version: '3'
 
 tasks:
-  switch:mac:
+  switch:darwin:
     cmds:
-      - home-manager switch --flake .#taiseiue@mac
+      - home-manager switch --flake .#taiseiue@darwin
   switch:linux:
     cmds:
       - home-manager switch --flake .#taiseiue@linux

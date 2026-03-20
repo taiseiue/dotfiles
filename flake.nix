@@ -21,7 +21,7 @@
     in
     {
       homeConfigurations = {
-        "taiseiue@mac" = mkHome "aarch64-darwin" ./layers/mac.nix;
+        "taiseiue@darwin" = mkHome "aarch64-darwin" ./layers/darwin.nix;
         "taiseiue@linux" = mkHome "x86_64-linux" ./layers/linux.nix;
       };
     };
