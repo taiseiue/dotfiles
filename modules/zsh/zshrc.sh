@@ -1,7 +1,7 @@
 function mkcd() {
   mkdir -p "$1" && cd "$1"
 }
-function ghq() {
+function _ghq() {
   if [[ "$1" == "checkout" ]]; then
       local branch=$(git branch | sed 's/^[ \*]*//' | fzf --query "$2" --prompt "branch> ")
       if [[ -n "$branch" ]]; then
