@@ -1,18 +1,26 @@
 function mkcd() {
   mkdir -p "$1" && cd "$1"
 }
-function _ghq() {
+function ghq() {
   if [[ "$1" == "checkout" ]]; then
       local branch=$(git branch | sed 's/^[ \*]*//' | fzf --query "$2" --prompt "branch> ")
       if [[ -n "$branch" ]]; then
-      git checkout "$branch"
+          git checkout "$branch"
       fi
   elif [[ "$1" == "clone" || "$1" == "list" || "$1" == "rm" || "$1" == "root" || "$1" == "create" ]]; then
       command ghq "$@"
   else
-      local selected=$(ghq list | fzf --query "$1" --prompt "repo> ")
-      if [[ -n "$selected" ]]; then
-      cd "$(ghq root)/$selected"
+      local candidates=$(command ghq list | grep -i "${1:-}")
+      local count=$(echo "$candidates" | grep -c .)
+      if [[ "$count" -eq 1 ]]; then
+          cd "$(command ghq root)/$candidates"
+      elif [[ "$count" -gt 1 ]]; then
+          local selected=$(echo "$candidates" | fzf --query "$1" --prompt "repo> ")
+          if [[ -n "$selected" ]]; then
+              cd "$(command ghq root)/$selected"
+          fi
+      else
+          echo "No matching repository found."
       fi
   fi
 }
