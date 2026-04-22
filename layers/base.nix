@@ -39,6 +39,7 @@
     claude-code
     minicom
     nixfmt
+    tailscale
   ];
 
   home.file = {
