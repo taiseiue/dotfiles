@@ -2,9 +2,6 @@
 {
   imports = [
     ./base.nix
-    ../modules/fonts.nix
-    ../modules/colima/colima.nix
-    ../modules/wezterm/wezterm.nix
   ];
 
   home.username = "taiseiue";
