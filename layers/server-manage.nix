@@ -8,5 +8,6 @@
     kubectl
     talosctl
     kubernetes-helm
+    ansible
   ];
 }
