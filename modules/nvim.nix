@@ -7,14 +7,15 @@
     vimAlias = true;
     withNodeJs = true;
     withPython3 = true;
+    withRuby = true;
 
-  plugins = with pkgs.vimPlugins; [
-    astrocore
-    astrotheme
-    astroui
-    astrolsp
-    mason-null-ls-nvim
-    mason-nvim-dap-nvim
+    plugins = with pkgs.vimPlugins; [
+      astrocore
+      astrotheme
+      astroui
+      astrolsp
+      mason-null-ls-nvim
+      mason-nvim-dap-nvim
     ];
   };
 }
