@@ -3,6 +3,7 @@
 {
   programs.neovim = {
     enable = true;
+    defaultEditor = true;
     viAlias = true;
     vimAlias = true;
     withNodeJs = true;
@@ -10,12 +11,14 @@
     withRuby = true;
 
     plugins = with pkgs.vimPlugins; [
-      astrocore
-      astrotheme
-      astroui
-      astrolsp
-      mason-null-ls-nvim
-      mason-nvim-dap-nvim
+      nvim-lspconfig
+      nvim-cmp
+      cmp-nvim-lsp
+      telescope-nvim
+      plenary-nvim
+      oil-nvim
+      nvim-treesitter
+      gitsigns-nvim
     ];
   };
 }
