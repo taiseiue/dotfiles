@@ -26,8 +26,8 @@
     awscli2
     google-cloud-sdk
     imagemagick
-    ffmpeg-full
-    ffmpeg-full.lib
+    ffmpeg
+    ffmpeg.lib
     jdk25
     gradle
     openssl
