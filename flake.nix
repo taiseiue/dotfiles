@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.11";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -11,19 +10,12 @@
   };
 
   outputs =
-    { nixpkgs, nixpkgs-stable, home-manager, ... }:
+    { nixpkgs, home-manager, ... }:
     let
       mkHome =
         system: module:
         home-manager.lib.homeManagerConfiguration {
-          pkgs = import nixpkgs {
-            inherit system;
-            overlays = [
-              (final: prev: {
-                wezterm = nixpkgs-stable.legacyPackages.${system}.wezterm;
-              })
-            ];
-          };
+          pkgs = nixpkgs.legacyPackages.${system};
           modules = [ module ];
         };
     in
