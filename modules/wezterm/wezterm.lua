@@ -31,7 +31,7 @@ config.initial_rows = 20
 config.scrollback_lines = 10000
 
 -- OSC52
-config.enable_csi_u_key_encoding = true
+config.enable_csi_u_key_encoding = false
 
 -- Tmux bindings
 config.leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 1000 }
