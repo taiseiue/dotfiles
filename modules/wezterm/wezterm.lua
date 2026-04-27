@@ -1,6 +1,6 @@
 local wezterm = require 'wezterm'
 
-local config = {}
+local config = wezterm.config_builder()
 
 -- Font
 config.font = wezterm.font_with_fallback {
@@ -29,9 +29,6 @@ config.initial_rows = 20
 
 -- Scrollback
 config.scrollback_lines = 10000
-
--- OSC52
-config.enable_csi_u_key_encoding = false
 
 -- Tmux bindings
 config.leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 1000 }
