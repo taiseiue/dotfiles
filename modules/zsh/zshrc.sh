@@ -25,6 +25,7 @@ function _ghq() {
   fi
 }
 
+bindkey -e
 zle -N _ghq
 bindkey "^g" _ghq
 
