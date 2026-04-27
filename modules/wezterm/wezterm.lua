@@ -50,9 +50,6 @@ config.keys = {
   -- タブ移動
   { key = 'n', mods = 'LEADER', action = wezterm.action.ActivateTabRelative(1) },
   { key = 'p', mods = 'LEADER', action = wezterm.action.ActivateTabRelative(-1) },
-  -- タブ移動(iTerm2)
-  { key = 'LeftArrow' , mods = 'LEADER', action = wezterm.action.ActivateTabRelative(-1) },
-  { key = 'RightArrow', mods = 'LEADER', action = wezterm.action.ActivateTabRelative(1) },
 
   -- 単語単位操作
   { key = "LeftArrow",  mods = "ALT", action = wezterm.action.SendString "\x1bb" },
