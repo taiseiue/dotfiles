@@ -58,9 +58,9 @@ config.keys = {
   { key = 'RightArrow', mods = 'LEADER', action = wezterm.action.ActivateTabRelative(1) },
 
   -- 単語単位操作
-  { key = "LeftArrow",  mods = "ALT", action = wezterm.action.SendKey { key = "b", mods = "META" } },
-  { key = "RightArrow", mods = "ALT", action = wezterm.action.SendKey { key = "f", mods = "META" } },
-  { key = "Backspace",  mods = "ALT", action = wezterm.action.SendKey { key = "Backspace", mods = "META" } },
+  { key = "LeftArrow",  mods = "ALT", action = wezterm.action.SendString "\x1bb" },
+  { key = "RightArrow", mods = "ALT", action = wezterm.action.SendString "\x1bf" },
+  { key = "Backspace",  mods = "ALT", action = wezterm.action.SendString "\x1b\x7f" },
 }
 
 -- macのOptionキーをAltキーにする
