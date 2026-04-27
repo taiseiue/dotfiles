@@ -34,6 +34,9 @@ config.scrollback_lines = 10000
 config.leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 1000 }
 
 config.keys = {
+  -- CTRL+a をリテラル送信
+  { key = 'a', mods = 'LEADER|CTRL', action = wezterm.action.SendKey { key = 'a', mods = 'CTRL' } },
+
   -- ペイン分割
   { key = '"', mods = 'LEADER|SHIFT', action = wezterm.action.SplitVertical },
   { key = '%', mods = 'LEADER|SHIFT', action = wezterm.action.SplitHorizontal },
@@ -56,6 +59,10 @@ config.keys = {
   { key = "RightArrow", mods = "ALT", action = wezterm.action.SendString "\x1bf" },
   { key = "Backspace",  mods = "ALT", action = wezterm.action.SendString "\x1b\x7f" },
 }
+
+-- Window
+config.adjust_window_size_when_changing_font_size = false
+config.window_padding = { left = 4, right = 4, top = 4, bottom = 4 }
 
 -- macのOptionキーをAltキーにする
 config.send_composed_key_when_left_alt_is_pressed = false
