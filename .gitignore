@@ -1,3 +1,2 @@
 # zshcompileは含めない
 *.zwc
-.DS_Store
