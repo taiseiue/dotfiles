@@ -4,9 +4,6 @@ tasks:
   update:
     cmds:
       - nix flake update --flake ./ && git commit -am "Update flake lock" && git push
-    clean:
-      cmds:
-        - nix-collect-garbage --delete-older-than 7d && nix-store --gc
   switch:lily:
     cmds:
       - home-manager switch --flake .#taiseiue@lily
