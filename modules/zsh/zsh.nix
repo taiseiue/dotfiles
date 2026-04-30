@@ -15,7 +15,17 @@
       g = "_ghq";
       ghq = "_ghq";
     };
-    plugins = [ ];
+
+    plugins = [
+      {
+        name = "zsh-fzf-history-search";
+        src = "${pkgs.zsh-fzf-history-search}/share/zsh-fzf-history-search";
+      }
+      {
+        name = "fzf-tab";
+        src = "${pkgs.zsh-fzf-tab}/share/fzf-tab";
+      }
+    ];
 
     initContent = builtins.readFile ./zshrc.sh;
   };

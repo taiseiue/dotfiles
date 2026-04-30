@@ -4,9 +4,9 @@ tasks:
   update:
     cmds:
       - nix flake update --flake ./ && git commit -am "Update flake lock" && git push
-  switch:darwin:
+  switch:lily:
     cmds:
-      - home-manager switch --flake .#taiseiue@darwin
+      - home-manager switch --flake .#taiseiue@lily
   switch:linux:
     cmds:
       - home-manager switch --flake .#taiseiue@linux

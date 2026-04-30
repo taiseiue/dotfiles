@@ -1,6 +1,6 @@
 local wezterm = require 'wezterm'
 
-local config = {}
+local config = wezterm.config_builder()
 
 -- Font
 config.font = wezterm.font_with_fallback {
@@ -34,6 +34,9 @@ config.scrollback_lines = 10000
 config.leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 1000 }
 
 config.keys = {
+  -- CTRL+a をリテラル送信
+  { key = 'a', mods = 'LEADER|CTRL', action = wezterm.action.SendKey { key = 'a', mods = 'CTRL' } },
+
   -- ペイン分割
   { key = '"', mods = 'LEADER|SHIFT', action = wezterm.action.SplitVertical },
   { key = '%', mods = 'LEADER|SHIFT', action = wezterm.action.SplitHorizontal },
@@ -50,18 +53,18 @@ config.keys = {
   -- タブ移動
   { key = 'n', mods = 'LEADER', action = wezterm.action.ActivateTabRelative(1) },
   { key = 'p', mods = 'LEADER', action = wezterm.action.ActivateTabRelative(-1) },
-  -- タブ移動(iTerm2)
-  { key = 'LeftArrow' , mods = 'LEADER', action = wezterm.action.ActivateTabRelative(-1) },
-  { key = 'RightArrow', mods = 'LEADER', action = wezterm.action.ActivateTabRelative(1) },
 
   -- 単語単位操作
-  { key = "LeftArrow",  mods = "ALT", action = wezterm.action.SendKey { key = "b", mods = "META" } },
-  { key = "RightArrow", mods = "ALT", action = wezterm.action.SendKey { key = "f", mods = "META" } },
-  { key = "Backspace",  mods = "ALT", action = wezterm.action.SendKey { key = "Backspace", mods = "META" } },
+  { key = "LeftArrow",  mods = "ALT", action = wezterm.action.SendString "\x1bb" },
+  { key = "RightArrow", mods = "ALT", action = wezterm.action.SendString "\x1bf" },
+  { key = "Backspace",  mods = "ALT", action = wezterm.action.SendString "\x1b\x7f" },
 }
 
+-- Window
+config.adjust_window_size_when_changing_font_size = false
+
 -- macのOptionキーをAltキーにする
-config.send_composed_key_when_left_alt_is_pressed = true
-config.send_composed_key_when_right_alt_is_pressed = true
+config.send_composed_key_when_left_alt_is_pressed = false
+config.send_composed_key_when_right_alt_is_pressed = false
 
 return config

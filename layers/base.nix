@@ -15,8 +15,6 @@
   ];
 
   home.packages = with pkgs; [
-    zsh-fzf-history-search
-    zsh-fzf-tab
     gh
     ghq
     git-filter-repo
@@ -25,11 +23,11 @@
     curl
     fzf
     go-task
-    awscli
+    awscli2
     google-cloud-sdk
     imagemagick
-    ffmpeg-full
-    ffmpeg-full.lib
+    ffmpeg
+    ffmpeg.lib
     jdk25
     gradle
     openssl
