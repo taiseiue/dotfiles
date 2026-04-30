@@ -7,9 +7,6 @@ tasks:
   switch:lily:
     cmds:
       - home-manager switch --flake .#taiseiue@lily
-  switch:leica:
-    cmds:
-      - home-manager switch --flake .#taiseiue@leica
   switch:linux:
     cmds:
       - home-manager switch --flake .#taiseiue@linux
