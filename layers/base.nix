@@ -39,7 +39,8 @@
     claude-code
     minicom
     nixfmt
-  ];
+    cargo rustc rustfmt 
+];
 
   home.file = {
     #"default.zshrc".source = ./modules/zsh/default.zshrc;
