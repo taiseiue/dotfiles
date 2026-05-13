@@ -3,6 +3,8 @@
   imports = [
     ../layers/darwin.nix
     ../layers/server-manage.nix
+    ../layers/rust.nix
+    ../layers/java.nix
     ../modules/fonts.nix
     ../modules/colima/colima.nix
     ../modules/wezterm/wezterm.nix

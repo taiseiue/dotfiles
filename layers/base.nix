@@ -15,22 +15,15 @@
   ];
 
   home.packages = with pkgs; [
+    coreutils-full gcc curl fzf go-task openssl
     gh
     ghq
     git-filter-repo
-    coreutils-full
-    gcc
-    curl
-    fzf
-    go-task
     awscli2
     google-cloud-sdk
     imagemagick
     ffmpeg
     ffmpeg.lib
-    jdk25
-    gradle
-    openssl
     uv
     pnpm
     nodejs_24
@@ -39,7 +32,6 @@
     claude-code
     minicom
     nixfmt
-    cargo rustc rustfmt 
 ];
 
   home.file = {
