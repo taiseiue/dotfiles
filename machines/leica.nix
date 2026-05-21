@@ -5,6 +5,7 @@
     ../modules/fonts.nix
     ../modules/colima/colima.nix
     ../modules/wezterm/wezterm.nix
+    ../modules/vscode.nix
   ];
 
   home.username = "taiseiue";
