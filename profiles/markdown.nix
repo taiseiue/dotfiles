@@ -3,7 +3,7 @@
 
 {
   imports = [
-    ../profiles/vscode.nix
+    ../modules/vscode.nix
   ];
 
  programs.vscode.profiles.default.extensions =
