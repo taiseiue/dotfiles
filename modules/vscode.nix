@@ -7,9 +7,7 @@
     profiles.default.extensions =
       (with pkgs.vscode-extensions; [
         vscodevim.vim
-        yzhang.markdown-all-in-one
         ms-vscode-remote.remote-containers
-        golang.go
         github.codespaces
         github.copilot-chat
         github.vscode-github-actions
@@ -17,7 +15,6 @@
         streetsidesoftware.code-spell-checker
         docker.docker
         ms-azuretools.vscode-docker
-        ms-ceintl.vscode-language-pack-ja
         ms-azuretools.vscode-containers
         bmewburn.vscode-intelephense-client
       ])
@@ -33,12 +30,6 @@
           name = "rainglow";
           version = "1.5.2";
           sha256 = "sha256-1c/xQYnuJ3BkwfqjMeT2kG1ZsXyjEOypJs0pJbouZMQ=";
-        }
-        {
-          publisher = "mushan";
-          name = "vscode-paste-image";
-          version = "1.0.4";
-          sha256 = "sha256-a6prHWZ8neNYJ+ZDE9ZvA79+5X0UlsFf8XSHYfOmd/I=";
         }
       ];
   };

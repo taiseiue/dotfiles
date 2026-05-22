@@ -29,7 +29,6 @@
     imagemagick
     ffmpeg
     ffmpeg.lib
-    go
     cloudflared
     claude-code
     minicom
