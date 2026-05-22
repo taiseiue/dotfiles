@@ -11,11 +11,11 @@
     twxs.cmake
   ];
   pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-      {
-        name = "better-cpp-syntax";
-        publisher = "jeff-hykin";
-        version = "1.27.1";
-        sha256 = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-      }
-    ];
+  {
+    publisher = "ics";
+    name = "japanese-proofreading";
+    version = "1.27.1";
+    sha256 = "...";
+  }
+];
 }
