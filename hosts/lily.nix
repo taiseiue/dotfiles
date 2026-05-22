@@ -5,9 +5,12 @@
     ../profiles/server-manage.nix
     ../profiles/rust.nix
     ../profiles/java.nix
+    ../profiles/cpp.nix
+    ../profiles/node.nix
     ../modules/fonts.nix
     ../modules/colima/colima.nix
     ../modules/wezterm/wezterm.nix
+    ../modules/vscode.nix
   ];
 
   home.username = "taiseiue";
