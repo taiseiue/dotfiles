@@ -6,6 +6,9 @@
     ../modules/colima/colima.nix
     ../modules/wezterm/wezterm.nix
     ../modules/vscode.nix
+
+    # Languages
+    ../profiles/node.nix
   ];
 
   home.username = "taiseiue";
