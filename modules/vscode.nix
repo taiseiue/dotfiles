@@ -17,6 +17,7 @@
         "git.autofetch" = false;
         "git.confirmSync" = false;
         "git.enableSmartCommit" = true;
+        "workbench.colorTheme": "Kiwi Contrast"
       };
 
       extensions =
