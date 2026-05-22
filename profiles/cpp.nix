@@ -10,7 +10,7 @@
     ms-vscode.cpptools-extension-pack
     twxs.cmake
   ];
-  pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+  ++pkgs.vscode-utils.extensionsFromVscodeMarketplace [
   {
     publisher = "ics";
     name = "japanese-proofreading";
