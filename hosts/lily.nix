@@ -1,11 +1,13 @@
 { config, pkgs, ... }:
 {
   imports = [
-    ../layers/darwin.nix
+    ../platforms/darwin.nix
+    ../profiles/server-manage.nix
+    ../profiles/rust.nix
+    ../profiles/java.nix
     ../modules/fonts.nix
     ../modules/colima/colima.nix
     ../modules/wezterm/wezterm.nix
-    ../modules/vscode.nix
   ];
 
   home.username = "taiseiue";

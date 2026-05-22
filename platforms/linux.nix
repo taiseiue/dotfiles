@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 {
   imports = [
-    ./base.nix
+    ../profiles/base.nix
   ];
 
   home.username = "taiseiue";

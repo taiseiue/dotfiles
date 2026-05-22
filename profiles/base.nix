@@ -15,7 +15,12 @@
   ];
 
   home.packages = with pkgs; [
-    coreutils-full gcc curl fzf go-task openssl
+    coreutils-full
+    gcc
+    curl
+    fzf
+    go-task
+    openssl
     gh
     ghq
     git-filter-repo
@@ -25,14 +30,12 @@
     ffmpeg
     ffmpeg.lib
     uv
-    pnpm
-    nodejs_24
     go
     cloudflared
     claude-code
     minicom
     nixfmt
-];
+  ];
 
   home.file = {
     #"default.zshrc".source = ./modules/zsh/default.zshrc;
