@@ -11,6 +11,7 @@
       golang.go
       hashicorp.terraform
       daylerees.rainglow
+      mushan.vscode-paste-image
     ];
   };
 }

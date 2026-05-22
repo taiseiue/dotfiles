@@ -34,7 +34,6 @@
     cloudflared
     claude-code
     minicom
-    nixfmt
   ];
 
   home.file = {
