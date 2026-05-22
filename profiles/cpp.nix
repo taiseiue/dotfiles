@@ -17,7 +17,7 @@
         publisher = "ics";
         name = "japanese-proofreading";
         version = "1.27.1";
-        sha256 = "sha256-ここに実際のhash";
+        sha256 = pkgs.lib.fakeSha256;
       }
     ];
 }
