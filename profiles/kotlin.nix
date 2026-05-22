@@ -14,7 +14,7 @@
       publisher = "fwcd";
       name = "kotlin";
       version = "0.2.36";
-      sha256 = "sha256-UEEeK+PbqaEQ+kLh78NLzf8mhRx4HI9oBnn2cRjJmvc=";
+      sha256 = "sha256-tCpxFWSQZNhiHdJyxSbQ1QakS2jNqWQrA2/grLZklrM=";
     }
   ];
 }

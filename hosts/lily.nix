@@ -11,7 +11,6 @@
     ../modules/colima/colima.nix
     ../modules/wezterm/wezterm.nix
     ../modules/vscode.nix
-    ../profiles/kotlin.nix
   ];
 
   home.username = "taiseiue";
