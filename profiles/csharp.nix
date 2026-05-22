@@ -5,13 +5,10 @@
   ];
 
   home.packages = with pkgs; [
-    pnpm
-    nodejs_24
+    dotnet-sdk
   ];
   programs.vscode.extensions = with pkgs.vscode-extensions; [
-    biomejs.biome
-    vitest.explorer
-    esbenp.prettier-vscode
-    dbaeumer.vscode-eslint
+    ms-dotnettools.csdevkit
+    ms-dotnettools.csharp
   ];
 }

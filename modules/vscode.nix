@@ -12,6 +12,12 @@
       hashicorp.terraform
       daylerees.rainglow
       mushan.vscode-paste-image
+      github.codespaces
+      github.copilot-chat
+      github.vscode-github-actions
+      ms-vsliveshare.vsliveshare
+      streetsidesoftware.code-spell-checker
+      docker.docker
     ];
   };
 }
