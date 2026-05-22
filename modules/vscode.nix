@@ -4,6 +4,8 @@
   programs.vscode = {
     enable = true;
     mutableExtensionsDir = false;
+    enableExtensionUpdateCheck = false;
+    enableUpdateCheck = false;
 
     profiles.default = {
       userSettings = {
