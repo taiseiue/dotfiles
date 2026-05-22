@@ -11,7 +11,7 @@
       golang.go
       hashicorp.terraform
 #      daylerees.rainglow
-      mushan.vscode-paste-image
+#      mushan.vscode-paste-image
       github.codespaces
       github.copilot-chat
       github.vscode-github-actions
