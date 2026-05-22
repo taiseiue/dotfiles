@@ -10,7 +10,7 @@
       ms-vscode-remote.remote-containers
       golang.go
       hashicorp.terraform
-      daylerees.rainglow
+#      daylerees.rainglow
       mushan.vscode-paste-image
       github.codespaces
       github.copilot-chat
