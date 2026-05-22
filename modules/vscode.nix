@@ -23,7 +23,7 @@
       hashicorp.hcl
       mathiasfrohlich.kotlin
       ms-azuretools.vscode-containers
-      fwcd.kotlin
+#      fwcd.kotlin
       bmewburn.vscode-intelephense-client
     ];
   };
