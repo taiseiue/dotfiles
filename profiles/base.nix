@@ -29,7 +29,6 @@
     imagemagick
     ffmpeg
     ffmpeg.lib
-    uv
     go
     cloudflared
     claude-code

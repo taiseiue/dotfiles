@@ -18,6 +18,13 @@
       ms-vsliveshare.vsliveshare
       streetsidesoftware.code-spell-checker
       docker.docker
+      ms-azuretools.vscode-docker
+      ms-ceintl.vscode-language-pack-ja
+      hashicorp.hcl
+      mathiasfrohlich.kotlin
+      ms-azuretools.vscode-containers
+      fwcd.kotlin
+      bmewburn.vscode-intelephense-client
     ];
   };
 }
