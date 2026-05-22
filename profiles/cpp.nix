@@ -5,10 +5,17 @@
   ];
 
   programs.vscode.extensions = with pkgs.vscode-extensions; [
-    jeff-hykin.better-cpp-syntax
-    ms-vscode.cpp-devtools
+#    ms-vscode.cpp-devtools
     ms-vscode.cpptools
     ms-vscode.cpptools-extension-pack
     twxs.cmake
   ];
+  pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+      {
+        name = "better-cpp-syntax";
+        publisher = "jeff-hykin";
+        version = "1.27.1";
+        sha256 = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+      }
+    ];
 }
