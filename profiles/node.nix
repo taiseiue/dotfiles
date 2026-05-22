@@ -8,7 +8,7 @@
     pnpm
     nodejs_24
   ];
-  programs.vscode.extensions = with pkgs.vscode-extensions; [
+  programs.vscode.profiles.default.extensions = with pkgs.vscode-extensions; [
     biomejs.biome
     vitest.explorer
     esbenp.prettier-vscode

@@ -7,7 +7,7 @@
   home.packages = with pkgs; [
     uv
   ];
-  programs.vscode.extensions = with pkgs.vscode-extensions; [
+  programs.vscode.profiles.default.extensions = with pkgs.vscode-extensions; [
     ms-python.debugpy
     ms-python.python
     ms-python.vscode-pylance
