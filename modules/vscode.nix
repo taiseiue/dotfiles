@@ -4,11 +4,11 @@
   programs.vscode = {
     enable = true;
     mutableExtensionsDir = false;
-    enableExtensionUpdateCheck = false;
-    enableUpdateCheck = false;
 
     profiles.default = {
-      userSettings = {
+    enableExtensionUpdateCheck = false;
+    enableUpdateCheck = false;
+    userSettings = {
         "extensions.autoUpdate" = false;
         "extensions.autoCheckUpdates" = false;
         "editor.formatOnSave" = true;
