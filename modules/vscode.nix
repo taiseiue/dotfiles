@@ -21,9 +21,7 @@
       ms-azuretools.vscode-docker
       ms-ceintl.vscode-language-pack-ja
       hashicorp.hcl
-      mathiasfrohlich.kotlin
       ms-azuretools.vscode-containers
-#      fwcd.kotlin
       bmewburn.vscode-intelephense-client
     ];
   };
