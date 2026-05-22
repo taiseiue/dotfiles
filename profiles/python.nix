@@ -8,8 +8,8 @@
     uv
   ];
   programs.vscode.profiles.default.extensions = with pkgs.vscode-extensions; [
-#    ms-python.debugpy
-    ms-python.python
+    ms-python.debugpy
+#    ms-python.python
     ms-python.vscode-pylance
     ms-python.vscode-python-envs
     ms-toolsai.jupyter-keymap
