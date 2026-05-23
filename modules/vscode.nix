@@ -32,7 +32,7 @@ in
         "explorer.confirmDragAndDrop" = false;
         "explorer.compactFolders" = false;
         "files.exclude" = mkBoolAttrs Excludes;
-        "search.excluede" = mkBoolAttrs Excludes;
+        "search.exclude" = mkBoolAttrs Excludes;
         "files.watcherExclude" = mkBoolAttrs Excludes;
         "git.autofetch" = false;
         "git.confirmSync" = false;
