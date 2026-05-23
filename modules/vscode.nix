@@ -9,13 +9,9 @@ let
       }) patterns
     );
 
-  filesExcludes = [
+  Excludes = [
     "**/.git"
-    "**/.svn"
     "**/.DS_Store"
-    "**/node_modules"
-  ];
-  searchExcludes = [
     "**/node_modules"
   ];
 in
@@ -34,9 +30,10 @@ in
         "editor.tabSize" = 2;
         "explorer.confirmDelete" = false;
         "explorer.confirmDragAndDrop" = false;
-	"explorer.compactFolders" = false;
-	"files.exclude" = mkBoolAttrs filesExcludes;
-	"search.excluede" = mkBoolAttrs searchExcludes;
+        "explorer.compactFolders" = false;
+        "files.exclude" = mkBoolAttrs Excludes;
+        "search.excluede" = mkBoolAttrs Excludes;
+        "files.watcherExclude" = mkBoolAttrs Excludes;
         "git.autofetch" = false;
         "git.confirmSync" = false;
         "git.enableSmartCommit" = true;
