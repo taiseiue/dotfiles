@@ -17,7 +17,7 @@
           owner = "rainglow";
           repo = "vim";
           rev = "master"; 
-          sha256 = "";
+          sha256 = "sha256-3m94sIGiF7RUNnLtZ8SIAzjXS2BGGGpC1lvw5QrmPDM=";
         };
       })
       nvim-lspconfig
