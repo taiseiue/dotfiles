@@ -1,5 +1,20 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
+let
+  mkBoolAttrs = patterns:
+    lib.listToAttrs (
+      map (pattern: {
+        name = pattern;
+        value = true;
+      }) patterns
+    );
+
+  Excludes = [
+    "**/.git"
+    "**/.DS_Store"
+    "**/node_modules"
+  ];
+in
 {
   programs.vscode = {
     enable = true;
@@ -13,7 +28,12 @@
         "extensions.autoCheckUpdates" = false;
         "editor.formatOnSave" = true;
         "editor.tabSize" = 2;
+        "explorer.confirmDelete" = false;
         "explorer.confirmDragAndDrop" = false;
+        "explorer.compactFolders" = false;
+        "files.exclude" = mkBoolAttrs Excludes;
+        "search.exclude" = mkBoolAttrs Excludes;
+        "files.watcherExclude" = mkBoolAttrs Excludes;
         "git.autofetch" = false;
         "git.confirmSync" = false;
         "git.enableSmartCommit" = true;
