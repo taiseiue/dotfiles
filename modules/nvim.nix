@@ -11,6 +11,15 @@
     withRuby = true;
 
     plugins = with pkgs.vimPlugins; [
+      (pkgs.vimUtils.buildVimPlugin {
+        name = "rainglow";
+        src = pkgs.fetchFromGitHub {
+          owner = "rainglow";
+          repo = "vim";
+          rev = "master"; 
+          sha256 = "";
+        };
+      })
       nvim-lspconfig
       nvim-cmp
       cmp-nvim-lsp
