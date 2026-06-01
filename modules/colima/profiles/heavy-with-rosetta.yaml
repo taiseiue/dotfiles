@@ -1,0 +1,44 @@
+cpu: 6
+disk: 100
+memory: 8
+arch: aarch64
+runtime: docker
+modelRunner: docker
+hostname: ""
+
+kubernetes:
+  enabled: false
+  version: v1.35.0+k3s1
+  k3sArgs:
+    - --disable=traefik
+  port: 0
+
+autoActivate: true
+network:
+  address: false
+  mode: shared
+  interface: en0
+  preferredRoute: false
+  dns: [1.1.1.1, 8.8.8.8]
+  dnsHosts: {}
+  hostAddresses: false
+  gatewayAddress: 192.168.5.2
+
+forwardAgent: false
+docker: {}
+vmType: vz
+portForwarder: grpc
+rosetta: false
+binfmt: true
+nestedVirtualization: false
+mountType: virtiofs
+mountInotify: true
+cpuType: ""
+
+provision: null
+sshConfig: true
+sshPort: 0
+mounts: []
+diskImage: ""
+rootDisk: 20
+env: {}
