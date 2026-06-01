@@ -28,7 +28,7 @@ forwardAgent: false
 docker: {}
 vmType: vz
 portForwarder: grpc
-rosetta: false
+rosetta: true
 binfmt: true
 nestedVirtualization: false
 mountType: virtiofs
