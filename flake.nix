@@ -23,6 +23,7 @@
       homeConfigurations = {
         "taiseiue@lily" = mkHome "aarch64-darwin" ./hosts/lily.nix;
         "taiseiue@leica" = mkHome "aarch64-darwin" ./hosts/leica.nix;
+        "taiseiue@cocoa" = mkHome "aarch64-darwin" ./platforms/cocoa.nix;
         "taiseiue@linux" = mkHome "x86_64-linux" ./platforms/linux.nix;
       };
     };
