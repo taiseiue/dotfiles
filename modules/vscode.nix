@@ -52,7 +52,6 @@ in
           docker.docker
           ms-azuretools.vscode-docker
           ms-azuretools.vscode-containers
-          bmewburn.vscode-intelephense-client
         ])
         ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
           {
