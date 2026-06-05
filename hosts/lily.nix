@@ -13,6 +13,7 @@
     ../profiles/cpp.nix
     ../profiles/node.nix
     ../profiles/rust.nix
+    ../profiles/perl.nix
     ../profiles/python.nix
     ../profiles/markdown.nix
   ];
