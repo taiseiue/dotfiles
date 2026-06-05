@@ -11,6 +11,7 @@
     # Languages
     ../profiles/go.nix
     ../profiles/cpp.nix
+    ../profiles/nix.nix
     ../profiles/node.nix
     ../profiles/rust.nix
     ../profiles/python.nix
