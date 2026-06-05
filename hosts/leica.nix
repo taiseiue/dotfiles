@@ -9,6 +9,7 @@
 
     # Languages
     ../profiles/node.nix
+    ../profiles/perl.nix
   ];
 
   home.username = "taiseiue";
