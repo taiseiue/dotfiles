@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 tasks:
   update:
@@ -13,6 +13,9 @@ tasks:
   switch:linux:
     cmds:
       - home-manager switch --flake .#taiseiue@linux
+  switch:local:
+    cmds:
+      - home-manager switch --flake .#taiseiue@local
   switch:mac:
     cmds:
       - task: switch:darwin
