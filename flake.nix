@@ -24,7 +24,7 @@
         "taiseiue@lily" = mkHome "aarch64-darwin" ./hosts/lily.nix;
         "taiseiue@leica" = mkHome "aarch64-darwin" ./hosts/leica.nix;
         "taiseiue@linux" = mkHome "x86_64-linux" ./platforms/linux.nix;
-        "taiseiue@local" = mkHome "aarch64-darwin" ./hosts/local.nix;
+        "taiseiue@local" = mmkHome builtins.currentSystem ./hosts/local.nix;
       };
     };
 }
