@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 {
   imports = [
-    ../platforms/darwin.nix
+    ../profiles/base.nix
     ../modules/fonts.nix
     ../modules/colima/colima.nix
     ../modules/wezterm/wezterm.nix
