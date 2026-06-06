@@ -13,9 +13,9 @@ tasks:
   switch:linux:
     cmds:
       - home-manager switch --flake .#taiseiue@linux
-  switch:local:
+  switch:local-darwin:
     cmds:
-      - home-manager switch --flake .#taiseiue@local
+      - home-manager switch --flake .#taiseiue@local-darwin
   switch:mac:
     cmds:
       - task: switch:darwin
