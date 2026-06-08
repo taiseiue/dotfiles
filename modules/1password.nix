@@ -3,10 +3,6 @@ let
   isMac = pkgs.stdenv.isDarwin;
 in
 {
-  imports = [
-    ../profiles/base.nix
-  ];
-
   home.packages = with pkgs; [
     _1password-cli
   ];

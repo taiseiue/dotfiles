@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  home.stateVersion = "25.11";
+  home.stateVersion = "26.05";
 
   nixpkgs.config.allowUnfree = true;
 
@@ -12,6 +12,7 @@
     ../modules/zsh/zsh.nix
     ../modules/bash/bash.nix
     ../modules/git/git.nix
+    ../modules/fzf.nix
   ];
 
   home.packages = with pkgs; [
@@ -24,23 +25,11 @@
     gh
     ghq
     git-filter-repo
-    awscli2
-    google-cloud-sdk
-    imagemagick
-    ffmpeg
-    ffmpeg.lib
-    cloudflared
     claude-code
-    minicom
   ];
 
   home.file = {
     #"default.zshrc".source = ./modules/zsh/default.zshrc;
   };
-
-  home.sessionVariables = {
-    FZF_DEFAULT_OPTS = "--height ~40% --layout=reverse --border";
-  };
-
   programs.home-manager.enable = true;
 }
