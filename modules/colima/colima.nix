@@ -10,8 +10,9 @@
     docker
   ];
   home.activation.colimaConfig = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-    mkdir -p ~/.colima/default ~/.colima/heavy
+    mkdir -p ~/.colima/default ~/.colima/heavy ~/.colima/default-x86
     cp -f ${./profiles/default.yaml} ~/.colima/default/colima.yaml
     cp -f ${./profiles/heavy.yaml} ~/.colima/heavy/colima.yaml
+    cp -f ${./profiles/default-x86.yaml} ~/.colima/default-x86/colima.yaml
   '';
 }

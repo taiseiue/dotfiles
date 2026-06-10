@@ -1,7 +1,7 @@
-cpu: 6
+cpu: 2
 disk: 100
-memory: 8
-arch: aarch64
+memory: 2
+arch: x86_64
 runtime: docker
 modelRunner: docker
 hostname: ""
@@ -28,7 +28,7 @@ forwardAgent: false
 docker: {}
 vmType: vz
 portForwarder: grpc
-rosetta: true
+rosetta: false
 binfmt: true
 nestedVirtualization: false
 mountType: virtiofs
