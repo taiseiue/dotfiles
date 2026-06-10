@@ -35,24 +35,24 @@
         "git@github.com:" = {
           insteadOf = "https://github.com/";
         };
-        pull = {
-          rebase = "false";
-        };
-        push = {
-          default = "current";
-        };
-        ghq = {
-          root = "~/source";
-        };
+      };
+      pull = {
+        rebase = "false";
+      };
+      push = {
+        default = "current";
+      };
+      ghq = {
+        root = "~/source";
       };
     };
+  };
 
-    home.file = {
-      ".config/git/ignore".source = ./ignore;
-      ".config/git/hooks/pre-commit" = {
-        source = ./hooks/pre-commit.sh;
-        executable = true;
-      };
+  home.file = {
+    ".config/git/ignore".source = ./ignore;
+    ".config/git/hooks/pre-commit" = {
+      source = ./hooks/pre-commit.sh;
+      executable = true;
     };
   };
 }
