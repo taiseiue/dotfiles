@@ -7,6 +7,7 @@
 {
   home.packages = with pkgs; [
     colima
+    docker
   ];
   home.activation.colimaConfig = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     mkdir -p ~/.colima/default ~/.colima/heavy
