@@ -7,13 +7,6 @@
       user = {
         name = "taiseue";
         email = "taiseiue@wsnet.jp";
-        signingkey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGlgPD2+ahEVUXRvZJ+DlPti2UYY1FMR4GRg5u4nX46v";
-      };
-      commit = {
-        gpgsign = true;
-      };
-      gpg = {
-        format = "ssh";
       };
       aliases = {
         co = "checkout";
