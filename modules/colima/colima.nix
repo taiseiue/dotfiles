@@ -105,4 +105,7 @@
   home.packages = with pkgs; [
     docker
   ];
+  home.sessionVariables = pkgs.lib.mkIf isMac {
+    COLIMA_SAVE_CONFIG = 0;
+  };
 }
