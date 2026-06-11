@@ -17,7 +17,9 @@ in
     };
     gpg = {
       format = "ssh";
-      program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign";
+      ssh = {
+        program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign";
+      };
     };
     commit = {
       gpgsign = true;
