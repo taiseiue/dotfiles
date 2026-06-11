@@ -6,6 +6,7 @@
     ../modules/colima/colima.nix
     ../modules/wezterm/wezterm.nix
     ../modules/vscode.nix
+    ../modules/1password.nix
 
     # Languages
     ../profiles/node.nix
