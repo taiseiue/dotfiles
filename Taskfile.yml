@@ -10,6 +10,9 @@ tasks:
   switch:leica:
     cmds:
       - home-manager switch --flake .#taiseiue@leica
+  switch:cosmos:
+    cmds:
+      - home-manager switch --flake .#taiseiue@cosmos
   switch:linux:
     cmds:
       - home-manager switch --flake .#taiseiue@linux
