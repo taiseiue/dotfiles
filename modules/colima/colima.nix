@@ -52,7 +52,7 @@
           diskImage = "";
           rootDisk = 20;
           env = { };
-            };
+        };
       };
       x86_64 = {
         settings = {
@@ -98,14 +98,14 @@
           diskImage = "";
           rootDisk = 20;
           env = { };
-            };
+        };
       };
     };
   };
   home.packages = with pkgs; [
     docker
   ];
-  home.sessionVariables = pkgs.lib.mkIf isMac {
+  home.sessionVariables = {
     COLIMA_SAVE_CONFIG = 0;
   };
 }
