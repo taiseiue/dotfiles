@@ -12,7 +12,7 @@
       ms-vscode.cpptools
       ms-vscode.cpptools-extension-pack
       twxs.cmake
-      vscode-extensions.llvm-vs-code-extensions.vscode-clangd
+      llvm-vs-code-extensions.vscode-clangd
     ])
     ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
       {
