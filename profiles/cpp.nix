@@ -4,7 +4,9 @@
   imports = [
     ./base.nix
   ];
-
+  home.packages = with pkgs; [
+    clang-tools
+  ];
   programs.vscode.profiles.default.extensions =
     (with pkgs.vscode-extensions; [
       ms-vscode.cpptools
@@ -28,6 +30,5 @@
     ];
   programs.neovim.plugins = with pkgs.vimPlugins; [
     coc-clangd
-    clang-tools
   ];
 }
