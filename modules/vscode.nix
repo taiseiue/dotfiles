@@ -43,7 +43,7 @@ in
         "git.autofetch" = false;
         "git.confirmSync" = false;
         "git.enableSmartCommit" = true;
-        "workbench.colorTheme" = "Juicy (rainglow)";
+        "workbench.colorTheme" = "Juicy Contrast (rainglow)";
       };
 
       extensions =
