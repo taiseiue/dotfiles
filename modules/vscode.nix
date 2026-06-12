@@ -43,7 +43,7 @@ in
         "git.autofetch" = false;
         "git.confirmSync" = false;
         "git.enableSmartCommit" = true;
-        "workbench.colorTheme" = "Juicy Contrast (rainglow)";
+        "workbench.colorTheme" = "Mellow Contrast (rainglow)";
       };
 
       extensions =
@@ -71,6 +71,12 @@ in
             name = "rainglow";
             version = "1.5.2";
             sha256 = "sha256-1c/xQYnuJ3BkwfqjMeT2kG1ZsXyjEOypJs0pJbouZMQ=";
+          }
+          {
+            publisher = "sumomoneko";
+            name = "migemo-isearch";
+            version = "0.4.0";
+            sha256 = "sha256-UEEeK+PbqaEQ+kLh78NLzf8mhRx4HI9oBnn2cRjJmvc=";
           }
         ];
     };
