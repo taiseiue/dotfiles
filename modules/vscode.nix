@@ -76,7 +76,7 @@ in
             publisher = "sumomoneko";
             name = "migemo-isearch";
             version = "0.4.0";
-            sha256 = "sha256-UEEeK+PbqaEQ+kLh78NLzf8mhRx4HI9oBnn2cRjJmvc=";
+            sha256 = "sha256-sdxhQc3vjoMq6gAfFWUZNmNZxNxsRasQvfIGiOf7Qgg=";
           }
         ];
     };
