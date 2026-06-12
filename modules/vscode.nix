@@ -58,6 +58,7 @@ in
           docker.docker
           ms-azuretools.vscode-docker
           ms-azuretools.vscode-containers
+          vscodevim.vim
         ])
         ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
           {
