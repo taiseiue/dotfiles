@@ -1,7 +1,13 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 let
-  mkBoolAttrs = patterns:
+  mkBoolAttrs =
+    patterns:
     lib.listToAttrs (
       map (pattern: {
         name = pattern;
@@ -21,9 +27,9 @@ in
     mutableExtensionsDir = false;
 
     profiles.default = {
-    enableExtensionUpdateCheck = false;
-    enableUpdateCheck = false;
-    userSettings = {
+      enableExtensionUpdateCheck = false;
+      enableUpdateCheck = false;
+      userSettings = {
         "extensions.autoUpdate" = false;
         "extensions.autoCheckUpdates" = false;
         "editor.formatOnSave" = true;
@@ -37,7 +43,7 @@ in
         "git.autofetch" = false;
         "git.confirmSync" = false;
         "git.enableSmartCommit" = true;
-        "workbench.colorTheme" = "Kiwi Contrast (rainglow)";
+        "workbench.colorTheme" = "Juicy (rainglow)";
       };
 
       extensions =
@@ -67,6 +73,6 @@ in
             sha256 = "sha256-1c/xQYnuJ3BkwfqjMeT2kG1ZsXyjEOypJs0pJbouZMQ=";
           }
         ];
-      };
-};
+    };
+  };
 }
