@@ -6,4 +6,7 @@
     enableBashIntegration = true;
     extraConfig = builtins.readFile ./wezterm.lua;
   };
+  programs.vscode.profiles.default.userSettings = {
+    "terminal.external.osxExec" = "WezTerm.app";
+  };
 }
