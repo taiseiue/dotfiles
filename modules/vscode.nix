@@ -68,9 +68,9 @@ in
             sha256 = "sha256-UEEeK+PbqaEQ+kLh78NLzf8mhRx4HI9oBnn2cRjJmvc=";
           }
           {
-            publisher = "daylerees";
-            name = "rainglow";
-            version = "1.5.2";
+            publisher = "filipjane";
+            name = "0x96f-vscode-theme";
+            version = "0.2.0";
             sha256 = "sha256-1c/xQYnuJ3BkwfqjMeT2kG1ZsXyjEOypJs0pJbouZMQ=";
           }
         ];
