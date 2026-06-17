@@ -71,7 +71,7 @@ in
             publisher = "filipjane";
             name = "0x96f-vscode-theme";
             version = "0.2.0";
-            sha256 = "sha256-1c/xQYnuJ3BkwfqjMeT2kG1ZsXyjEOypJs0pJbouZMQ=";
+            sha256 = "sha256-DkHuG2ugJjAe2XAHywiGaBF38xclHe+c16ao6o71z5Q=";
           }
         ];
     };
