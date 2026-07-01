@@ -1,4 +1,4 @@
-{
+
   config,
   pkgs,
   lib,
@@ -13,7 +13,7 @@
           cpu = 4;
           disk = 100;
           memory = 4;
-          arch = "aarch64";
+          #arch = "aarch64";
           runtime = "docker";
           modelRunner = "docker";
           hostname = null;
