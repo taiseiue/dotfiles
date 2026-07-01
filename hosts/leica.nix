@@ -7,6 +7,7 @@
     ../modules/wezterm/wezterm.nix
     ../modules/vscode.nix
     ../modules/1password.nix
+    ../profiles/cloud.nix
 
     # Languages
     ../profiles/node.nix
