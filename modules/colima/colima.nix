@@ -10,9 +10,9 @@
     profiles = {
       default = {
         settings = {
-          cpu = 4;
+          cpu = 6;
           disk = 100;
-          memory = 4;
+          memory = 8;
           #arch = "aarch64";
           runtime = "docker";
           modelRunner = "docker";
