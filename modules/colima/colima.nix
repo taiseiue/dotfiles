@@ -36,15 +36,27 @@
           };
           forwardAgent = false;
           docker = { };
-          vmType = "qemu";
+          vmType = "vz";
           portForwarder = "ssh";
-          rosetta = false;
+          rosetta = true;
           binfmt = true;
           nestedVirtualization = false;
-          mountType = "sshfs";
+          mountType = "virtiofs";
           mountInotify = false;
           cpuType = "host";
-          provision = [ ];
+          provision = [
+            {
+              mode = "system";
+              script = ''
+                if [ ! -f /swapfile ]; then
+                  fallocate -l 4G /swapfile
+                  chmod 600 /swapfile
+                  mkswap /swapfile
+                fi
+                swapon /swapfile || true
+              '';
+            }
+          ];
           sshConfig = true;
           sshPort = 0;
           mounts = [ ];
