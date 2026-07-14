@@ -54,6 +54,8 @@
                   mkswap /swapfile
                 fi
                 swapon /swapfile || true
+
+                ip addr add 192.168.64.100/24 dev col0 2>/dev/null || true
               '';
             }
           ];
