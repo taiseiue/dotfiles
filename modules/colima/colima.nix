@@ -12,8 +12,7 @@
         settings = {
           cpu = 6;
           disk = 100;
-          memory = 4;
-          #arch = "aarch64";
+          memory = 8;
           runtime = "docker";
           modelRunner = "docker";
           hostname = null;
