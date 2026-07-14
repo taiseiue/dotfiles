@@ -24,7 +24,7 @@
           };
           autoActivate = true;
           network = {
-            address = false;
+            address = true;
             mode = "shared";
             interface = "en0";
             preferredRoute = false;
@@ -36,12 +36,12 @@
           };
           forwardAgent = false;
           docker = { };
-          vmType = "qemu";
+          vmType = "vz";
           portForwarder = "ssh";
-          rosetta = false;
+          rosetta = true;
           binfmt = true;
           nestedVirtualization = false;
-          mountType = "sshfs";
+          mountType = "virtiofs";
           mountInotify = false;
           cpuType = "host";
           provision = [
