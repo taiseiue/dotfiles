@@ -24,7 +24,7 @@
           };
           autoActivate = true;
           network = {
-            address = false;
+            address = true;
             mode = "shared";
             interface = "en0";
             preferredRoute = false;
