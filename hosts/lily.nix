@@ -21,6 +21,7 @@
     ../profiles/rust.nix
     ../profiles/python.nix
     ../profiles/markdown.nix
+    ../profiles/dotnet.nix
   ];
 
   home.username = "taiseiue";
