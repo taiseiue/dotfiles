@@ -18,9 +18,6 @@
           hostname = null;
           kubernetes = {
             enabled = false;
-            version = "v1.33.3+k3s1";
-            k3sArgs = [ "--disable=traefik" ];
-            port = 0;
           };
           autoActivate = true;
           network = {
@@ -42,23 +39,9 @@
           binfmt = true;
           nestedVirtualization = false;
           mountType = "virtiofs";
-          mountInotify = false;
+          mountInotify = true;
           cpuType = "host";
-          provision = [
-            {
-              mode = "system";
-              script = ''
-                if [ ! -f /swapfile ]; then
-                  fallocate -l 4G /swapfile
-                  chmod 600 /swapfile
-                  mkswap /swapfile
-                fi
-                swapon /swapfile || true
-
-                ip addr add 192.168.64.100/24 dev col0 2>/dev/null || true
-              '';
-            }
-          ];
+          provision = [];
           sshConfig = true;
           sshPort = 0;
           mounts = [ ];
