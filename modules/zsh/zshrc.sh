@@ -25,6 +25,23 @@ function _ghq() {
   fi
 }
 
+function usenode(){
+    local version="$1"
+    if [[ -z "$version" ]]; then
+        if [[ -f ".nvmrc" ]]; then
+            version=$(cat .nvmrc)
+        elif [[ -f ".node-version" ]]; then
+            version=$(cat .node-version)
+        else
+            echo "No version specified and no node-version file found."
+            return 1
+        fi
+    fi
+    local major=$(echo "$version" | cut -d. -f1)
+    echo "Switching to Node.js version $version"
+    nix shell "nixpkgs#nodejs_$major" --command "$SHELL"
+}
+
 bindkey -e
 zle -N _ghq
 bindkey "^g" _ghq
