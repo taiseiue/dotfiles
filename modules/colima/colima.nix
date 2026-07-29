@@ -19,7 +19,7 @@
           kubernetes = {
             enabled = false;
           };
-          autoActivate = true;
+          autoActivate = false;
           network = {
             address = true;
             mode = "shared";
