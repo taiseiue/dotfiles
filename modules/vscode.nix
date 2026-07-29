@@ -44,21 +44,15 @@ in
         "git.confirmSync" = false;
         "git.enableSmartCommit" = true;
         "workbench.colorTheme" = "0x96f";
-      };
-
-      json = {
-        schemaDownload = {
-          trustedDomains = {
-            "https://schemastore.azurewebsites.net/" = true;
-            "https://raw.githubusercontent.com/microsoft/vscode/" = true;
-            "https://raw.githubusercontent.com/devcontainers/spec/" = true;
-            "https://www.schemastore.org/" = true;
-            "https://json.schemastore.org/" = true;
-            "https://json-schema.org/" = true;
-            "https://developer.microsoft.com/json-schemas/" = true;
-            "https://biomejs.dev" = true;
-            
-          };
+        "json.schemaDownload.trustedDomains" = {
+          "https://schemastore.azurewebsites.net/" = true;
+          "https://raw.githubusercontent.com/microsoft/vscode/" = true;
+          "https://raw.githubusercontent.com/devcontainers/spec/" = true;
+          "https://www.schemastore.org/" = true;
+          "https://json.schemastore.org/" = true;
+          "https://json-schema.org/" = true;
+          "https://developer.microsoft.com/json-schemas/" = true;
+          "https://biomejs.dev" = true;
         };
       };
 
