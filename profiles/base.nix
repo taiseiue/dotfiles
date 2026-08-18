@@ -25,7 +25,6 @@
     gh
     ghq
     git-filter-repo
-    claude-code
   ];
 
   home.file = {
