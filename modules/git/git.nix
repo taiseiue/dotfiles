@@ -24,11 +24,6 @@
         branch = "auto";
         grep = "auto";
       };
-      url = {
-        "git@github.com:" = {
-          insteadOf = "https://github.com/";
-        };
-      };
       pull = {
         rebase = "false";
       };
