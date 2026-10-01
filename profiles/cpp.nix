@@ -7,6 +7,9 @@
   home.packages = with pkgs; [
     clang-tools
   ];
+  programs.vscode.profiles.default.userSettings = {
+    "C_Cpp.intelliSenseEngine" = "disabled";
+  };
   programs.vscode.profiles.default.extensions =
     (with pkgs.vscode-extensions; [
       ms-vscode.cpptools
