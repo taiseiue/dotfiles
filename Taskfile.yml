@@ -6,19 +6,19 @@ tasks:
       - nix flake update --flake ./ && git commit -am "Update flake lock" && git push
   switch:lily:
     cmds:
-      - home-manager switch --flake .#taiseiue@lily
+      - home-manager switch -b backup --flake .#taiseiue@lily
   switch:leica:
     cmds:
-      - home-manager switch --flake .#taiseiue@leica
+      - home-manager switch -b backup --flake .#taiseiue@leica
   switch:cosmos:
     cmds:
-      - home-manager switch --flake .#taiseiue@cosmos
+      - home-manager switch -b backup --flake .#taiseiue@cosmos
   switch:linux:
     cmds:
-      - home-manager switch --flake .#taiseiue@linux
+      - home-manager switch -b backup --flake .#taiseiue@linux
   switch:local-darwin:
     cmds:
-      - home-manager switch --flake .#taiseiue@local-darwin
+      - home-manager switch -b backup --flake .#taiseiue@local-darwin
   switch:mac:
     cmds:
       - task: switch:darwin
