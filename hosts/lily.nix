@@ -22,6 +22,7 @@
     ../profiles/python.nix
     ../profiles/markdown.nix
     ../profiles/csharp.nix
+    ../profiles/zig.nix
   ];
 
   home.username = "taiseiue";
