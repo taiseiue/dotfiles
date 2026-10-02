@@ -27,6 +27,7 @@ in
     mutableExtensionsDir = false;
 
     profiles.default = {
+      mutableUserSettings = true;
       enableExtensionUpdateCheck = false;
       enableUpdateCheck = false;
       userSettings = {
@@ -87,14 +88,4 @@ in
     };
   };
 
-  # VSCodeはsettings.jsonを変更しがちなので書き込み可能にしてあげる
-  home.activation.vscodeSettingsWritable = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-    settingsFile="$HOME/Library/Application Support/Code/User/settings.json"
-    if [ -L "$settingsFile" ]; then
-      target=$(readlink -f "$settingsFile")
-      run rm -f "$settingsFile"
-      run cp "$target" "$settingsFile"
-      run chmod u+w "$settingsFile"
-    fi
-  '';
 }
