@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 let
-  isMac = pkgs.stdenv.isDarwin;
+  isMac = pkgs.stdenv.hostPlatform.isDarwin;
 in
 {
   home.packages = with pkgs; [
