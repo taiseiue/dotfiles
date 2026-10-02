@@ -23,6 +23,7 @@
     ../profiles/markdown.nix
     ../profiles/csharp.nix
     ../profiles/zig.nix
+    ../profiles/java.nix
   ];
 
   home.username = "taiseiue";
