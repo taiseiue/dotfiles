@@ -9,7 +9,7 @@
       vi = "nvim";
       ll = "ls -alF";
       grep = "grep --color=auto";
-      g = "_ghq";
+      g = "ghq";
     };
 
     functions = {
