@@ -13,6 +13,7 @@
     ../modules/bash/bash.nix
     ../modules/git/git.nix
     ../modules/fzf.nix
+    ../modules/fish.nix
   ];
 
   home.packages = with pkgs; [
