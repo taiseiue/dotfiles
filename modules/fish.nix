@@ -10,19 +10,18 @@
       ll = "ls -alF";
       grep = "grep --color=auto";
       g = "_ghq";
-      ghq = "_ghq";
     };
 
     functions = {
       mkcd = "mkdir -p $argv[1]; and cd $argv[1]";
       
-      _ghq = ''
+      ghq = ''
         if test "$argv[1]" = "checkout"
             set -l branch (git branch | sed 's/^[ \*]*//' | fzf --query "$argv[2]" --prompt "branch> ")
             if test -n "$branch"
                 git checkout "$branch"
             end
-        else if contains -- "$argv[1]" clone list rm root create
+        else if contains -- "$argv[1]" clone list rm root create get
             command ghq $argv
         else
             set -l query "$argv[1]"
@@ -62,7 +61,7 @@
 
       # キーバインド
       fish_user_key_bindings = ''
-        bind \cg '_ghq; commandline -f repaint'
+        bind \cg 'ghq; commandline -f repaint'
       '';
     };
 
