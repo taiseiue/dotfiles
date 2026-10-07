@@ -42,20 +42,20 @@
       '';
 
       usenode = ''
-        set -l version $argv[1]
-        if test -z "$version"
+        set -l node_version $argv[1]
+        if test -z "$node_version"
             if test -f .nvmrc
-                set version (string trim (cat .nvmrc))
+                set node_version (string trim (cat .nvmrc))
             else if test -f .node-version
-                set version (string trim (cat .node-version))
+                set node_version (string trim (cat .node-version))
             else
                 echo "No version specified and no node-version file found."
                 return 1
             end
         end
 
-        set -l major (echo $version | cut -d. -f1)
-        echo "Switching to Node.js version $version"
+        set -l major (echo $node_version | cut -d. -f1)
+        echo "Switching to Node.js version $node_version"
         nix shell "nixpkgs#nodejs_$major" --command "$SHELL"
       '';
 
