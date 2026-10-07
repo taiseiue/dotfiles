@@ -59,10 +59,10 @@
         nix shell "nixpkgs#nodejs_$major" --command "$SHELL"
       '';
 
-      # キーバインド
       fish_user_key_bindings = ''
         bind \cg 'ghq; commandline -f repaint'
       '';
+      fish_right_promt = '';
     };
 
     plugins = [
