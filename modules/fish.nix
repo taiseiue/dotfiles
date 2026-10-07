@@ -62,7 +62,7 @@
       fish_user_key_bindings = ''
         bind \cg 'ghq; commandline -f repaint'
       '';
-      fish_right_promt = '';
+      fish_right_prompt = "";
     };
 
     plugins = [
