@@ -2,7 +2,7 @@ local wezterm = require 'wezterm'
 
 local config = wezterm.config_builder()
 
-config.default_prog = { 'fish' }
+config.default_prog = { fish_path }
 
 -- Font
 config.font = wezterm.font_with_fallback {
