@@ -28,12 +28,17 @@
       oil-nvim
       (nvim-treesitter.withAllGrammars)
       gitsigns-nvim
+      nvim-tree-lua
+      nvim-web-devicons
     ];
 
     extraLuaConfig = ''
+      vim.g.mapleader = " "
       require("nvim-treesitter.configs").setup({
         highlight = { enable = true },
       })
+      require("nvim-tree").setup({})
+      vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
     '';
   };
 }
