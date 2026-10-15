@@ -26,8 +26,14 @@
       telescope-nvim
       plenary-nvim
       oil-nvim
-      nvim-treesitter
+      (nvim-treesitter.withAllGrammars)
       gitsigns-nvim
     ];
+
+    extraLuaConfig = ''
+      require("nvim-treesitter.configs").setup({
+        highlight = { enable = true },
+      })
+    '';
   };
 }
