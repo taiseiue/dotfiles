@@ -34,8 +34,8 @@
 
     extraLuaConfig = ''
       vim.g.mapleader = " "
-      require("nvim-treesitter.configs").setup({
-        highlight = { enable = true },
+      vim.api.nvim_create_autocmd("FileType", {
+        callback = function() pcall(vim.treesitter.start) end,
       })
       require("nvim-tree").setup({})
       vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
